@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>哈希加密器</title>
+  <title>chiffreur de hachage</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="role-admin-page theme-dark theme-monitor hash-cracker-page">
   <div class="role-admin-shell hash-cracker-shell">
     <header class="role-admin-header role-detail-header">
-      <a class="role-admin-back" href="admin-monitor-dashboard.html">返回后台</a>
+      <a class="role-admin-back" href="admin-monitor-dashboard.html">Retour à l'arrière-plan</a>
       <div>
         <p class="role-admin-kicker">ADMIN PROGRAM / HASH</p>
-        <h1>哈希加密器</h1>
+        <h1>chiffreur de hachage</h1>
       </div>
     </header>
 
     <main class="hash-cracker-main">
       <section class="hash-unlock-panel" id="hashUnlockPanel" aria-labelledby="hashUnlockTitle">
-        <h2 id="hashUnlockTitle">程序锁定</h2>
+        <h2 id="hashUnlockTitle">verrouillage du programme</h2>
         <form class="pin-form" id="pinForm" autocomplete="off">
-          <div class="pin-boxes" aria-label="四位数密码">
-            <input class="pin-box" id="pinDigit1" type="text" inputmode="numeric" maxlength="1" aria-label="第 1 位密码">
-            <input class="pin-box" id="pinDigit2" type="text" inputmode="numeric" maxlength="1" aria-label="第 2 位密码">
-            <input class="pin-box" id="pinDigit3" type="text" inputmode="numeric" maxlength="1" aria-label="第 3 位密码">
-            <input class="pin-box" id="pinDigit4" type="text" inputmode="numeric" maxlength="1" aria-label="第 4 位密码">
+          <div class="pin-boxes" aria-label="mot de passe à quatre chiffres">
+            <input class="pin-box" id="pinDigit1" type="text" inputmode="numeric" maxlength="1" aria-label="1er mot de passe">
+            <input class="pin-box" id="pinDigit2" type="text" inputmode="numeric" maxlength="1" aria-label="2ème mot de passe">
+            <input class="pin-box" id="pinDigit3" type="text" inputmode="numeric" maxlength="1" aria-label="Mot de passe à 3ème chiffres">
+            <input class="pin-box" id="pinDigit4" type="text" inputmode="numeric" maxlength="1" aria-label="Mot de passe à 4ème chiffres">
           </div>
-          <button type="submit">解锁</button>
-          <p class="pin-error" id="pinError" role="status" aria-live="polite" hidden>密码错误</p>
+          <button type="submit">Ouvrir</button>
+          <p class="pin-error" id="pinError" role="status" aria-live="polite" hidden>Mauvais mot de passe</p>
         </form>
       </section>
 
       <section class="hash-loading-panel" id="hashLoadingPanel" hidden aria-live="polite">
         <div class="hash-loading-core"></div>
-        <p>正在载入加密核心...</p>
+        <p>Chargement du noyau de chiffrement...</p>
       </section>
 
       <section class="hash-tool-panel" id="hashToolPanel" hidden aria-labelledby="hashToolTitle">
-        <h2 id="hashToolTitle">哈希生成器</h2>
+        <h2 id="hashToolTitle">Générateur de hachage</h2>
         <form class="hash-date-form" id="hashDateForm" autocomplete="off">
           <div class="hash-date-row">
-            <input id="hashDateInput" name="hashDateInput" type="text" aria-label="生成器输入" data-history-key="hash-date">
-            <button type="submit">生成</button>
+            <input id="hashDateInput" name="hashDateInput" type="text" aria-label="Entrée du générateur" data-history-key="hash-date">
+            <button type="submit">générer</button>
           </div>
         </form>
         <output class="hash-output" id="hashOutput" aria-live="polite"></output>

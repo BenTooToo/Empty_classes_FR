@@ -20,8 +20,8 @@ function appendReplies(amount = 10) {
     const post = document.createElement('article');
     post.className = 'forum-post ritual-confirmed-post ritual-generated-post';
     post.innerHTML = `
-      <div class="post-user"><strong>${floor}楼</strong><span>游客</span></div>
-      <div class="post-body"><time datetime="${label.replace(' ', 'T')}">${label}</time><p>已经灵验，谢谢楼主。</p></div>
+      <div class="post-user"><strong>${floor}Étage</strong><span>Visiteurs</span></div>
+      <div class="post-body"><time datetime="${label.replace(' ', 'T')}">${label}</time><p>Cela a fonctionné, merci, hôte. </p></div>
     `;
     fragment.appendChild(post);
   }

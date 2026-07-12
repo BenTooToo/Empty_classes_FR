@@ -8,17 +8,17 @@ loadingOverlay.hidden = true;
 loadingOverlay.innerHTML = `
   <div class="role-file-loading-box" role="status" aria-live="polite">
     <div class="role-file-loading-ring" id="roleFileLoadingRing"></div>
-    <p id="roleFileLoadingText">正在读取文件...</p>
+    <p id="roleFileLoadingText">Lecture du fichier...</p>
   </div>
   <form class="role-file-interrupt-dialog" id="roleFileInterruptDialog" autocomplete="off" hidden>
     <div class="role-file-interrupt-header">
-      <strong>读取故障</strong>
-      <button class="role-file-interrupt-close" id="roleFileInterruptClose" type="button" aria-label="退出读取故障">退出</button>
+      <strong>Échec de lecture</strong>
+      <button class="role-file-interrupt-close" id="roleFileInterruptClose" type="button" aria-label="Échec de lecture de sortie">Quitter</button>
     </div>
-    <p>该网站已经被<span class="encrypted-redaction" aria-label="加密内容">██████</span>加密，请输入密匙进入。</p>
-    <label for="roleFileSecret">密匙</label>
+    <p>Ce site Web a été crypté par <span class="encrypted-redaction" aria-label="Encrypted content">██████</span>, veuillez entrer la clé pour entrer. </p>
+    <label for="roleFileSecret">Clé</label>
     <input id="roleFileSecret" type="password" autocomplete="off" required>
-    <button type="submit">继续读取</button>
+    <button type="submit">Continuer la lecture</button>
     <output id="roleFileSecretMessage" aria-live="polite"></output>
   </form>
 `;
@@ -27,7 +27,7 @@ logoutOverlay.className = "role-logout-loading-overlay";
 logoutOverlay.hidden = true;
 logoutOverlay.innerHTML = `
   <div class="role-logout-loading-box" role="status" aria-live="polite">
-    <p>正在退出登录...</p>
+    <p>Déconnexion...</p>
     <div class="role-logout-loading-track">
       <span id="roleLogoutLoadingBar"></span>
     </div>
@@ -53,7 +53,7 @@ interruptClose.addEventListener("click", () => {
   loadingStarted = false;
   secretInput.value = "";
   secretMessage.textContent = "";
-  loadingText.textContent = "正在读取文件...";
+  loadingText.textContent = "Lecture du fichier...";
   loadingRing.style.setProperty("--file-progress", "0deg");
 });
 
@@ -83,14 +83,14 @@ fileLinks.forEach((link) => {
 
       if (isSoulReturnLog && progress >= 0.5) {
         loadingRing.style.setProperty("--file-progress", "180deg");
-        loadingText.textContent = "读取在 50% 处发生故障";
+        loadingText.textContent = "La lecture échoue à 50 %";
         interruptDialog.hidden = false;
         secretInput.focus();
 
         interruptDialog.onsubmit = (submitEvent) => {
           submitEvent.preventDefault();
           if (secretInput.value !== "pieux") {
-            secretMessage.textContent = "密匙错误";
+            secretMessage.textContent = "Mauvaise clé";
             secretInput.value = "";
             secretInput.focus();
             return;
@@ -98,7 +98,7 @@ fileLinks.forEach((link) => {
 
           sessionStorage.setItem("soulReturnUnlocked", "true");
           interruptDialog.hidden = true;
-          loadingText.textContent = "密匙正确，继续读取文件...";
+          loadingText.textContent = "La clé est correcte, continuez la lecture du fichier...";
           const resumedAt = performance.now();
 
           function resumeProgress(resumeNow) {

@@ -1,14 +1,14 @@
 const accounts = [
   {
     id: "monitor",
-    displayName: "班长",
+    displayName: "délégué",
     aliases: ["admin-07"],
     passwords: ["damao"],
     href: "pages/admin-monitor-dashboard.html"
   },
   {
     id: "art",
-    displayName: "美术委员",
+    displayName: "déléguée aux arts",
     aliases: ["qoisadjk"],
     passwords: ["inks"],
     passwordCaseSensitive: true,
@@ -16,14 +16,14 @@ const accounts = [
   },
   {
     id: "sports",
-    displayName: "肖青",
+    displayName: "Xiao Qing — délégué aux sports",
     aliases: ["qx17"],
     passwords: ["m04"],
     href: "pages/admin-sports-dashboard.html"
   },
   {
     id: "info",
-    displayName: "信息委员",
+    displayName: "déléguée à l’informatique",
     aliases: ["quietarchive"],
     passwords: ["6D3F8A91C4E72B0F9A5D13E8B6C0472AD9F01C35E8B64A7F2D0C93B18E5A4F6D"],
     href: "pages/admin-info-dashboard.html"
@@ -41,10 +41,10 @@ const loadingLine = document.querySelector("#loadingLine");
 const loadingBar = document.querySelector("#loadingBar");
 
 const loadingSteps = [
-  { text: "正在验证账号权限...", width: "26%" },
-  { text: "正在读取后台文件列表...", width: "54%" },
-  { text: "正在恢复只读镜像...", width: "78%" },
-  { text: "验证通过，正在打开后台...", width: "100%" }
+  { text: "Vérification des autorisations du compte...", width: "26%" },
+  { text: "Lecture de la liste des fichiers d'arrière-plan...", width: "54%" },
+  { text: "Restauration du miroir en lecture seule...", width: "78%" },
+  { text: "Vérification réussie, ouverture de l'arrière-plan...", width: "100%" }
 ];
 
 function normalize(value) {
@@ -76,8 +76,8 @@ loginForm.addEventListener("submit", (event) => {
   const account = findAccount(usernameInput.value, passwordInput.value);
 
   if (!account) {
-    adminState.textContent = "验证失败";
-    message.textContent = "用户名或密码不正确。";
+    adminState.textContent = "L'authentification a échoué";
+    message.textContent = "Le nom d'utilisateur ou le mot de passe est incorrect.";
     passwordInput.value = "";
     passwordInput.focus();
     return;
@@ -85,7 +85,7 @@ loginForm.addEventListener("submit", (event) => {
 
   sessionStorage.setItem("zt6AdminAccount", account.id);
   sessionStorage.setItem("zt6AdminDisplayName", account.displayName);
-  adminState.textContent = "验证通过";
+  adminState.textContent = "Vérification réussie";
   message.textContent = "";
   loginPanel.hidden = true;
   loadingPanel.hidden = false;

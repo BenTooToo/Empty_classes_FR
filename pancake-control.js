@@ -64,12 +64,15 @@ addressQuery.addEventListener("submit", (event) => {
   const road = normalizeAddressPart(addressQuery.elements.road.value);
   const houseNumber = normalizeAddressPart(addressQuery.elements["house-number"].value);
 
-  if (road === "苍松7路" && houseNumber === "78号") {
+  if (
+    road === normalizeAddressPart("7ème route de Cangsong") &&
+    houseNumber === normalizeAddressPart("N° 78")
+  ) {
     showQueryModal();
     return;
   }
 
-  window.alert("查询完成：该位置不存在本公司服务。什么也不会发生。");
+  window.alert("Requête terminée : Le service de notre entreprise n'existe pas à cet endroit. Il ne se passera rien.");
 });
 
 confirmButtons.forEach((button) => button.addEventListener("click", loadSurveillance));
@@ -88,7 +91,7 @@ closeInstallationInvite.addEventListener("click", () => {
 
 installationTimeButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    window.alert(`已预约 ${button.dataset.installationTime}。安装地点：你的卧室。`);
+    window.alert(`${button.dataset.installationTime} a été réservé. Lieu d'installation : votre chambre.`);
     installationInvite.classList.remove("is-visible");
     installationInvite.setAttribute("aria-hidden", "true");
   });

@@ -3,59 +3,59 @@ const options = document.querySelector("#endingChoiceOptions");
 const hint = document.querySelector("#endingChoiceHint");
 
 const intro = [
-  "你，是肖青。",
-  "你是仪式的参与者，是被抛弃者，是失忆者，更是探索者。",
-  "你决定复活林媛，你的朋友。"
+  "Vous êtes Xiao Qing.",
+  "Vous êtes un participant au rituel, un paria, un amnésique et un explorateur.",
+  "Vous décidez de ressusciter Lin Yuan, votre ami."
 ];
 
 const companionStories = {
   yes: [
-    "你来到了信息委员的家中。",
-    "信息委员跟你说：“这样啊，我了解了。根据我对你的监视，我也确实了解你没有恶意。”",
-    "“我认为，以你现在的状态，可能比我更适合作为仪式的启动者，因为你自从失忆后少了很多的杂念。”",
-    "信息委员向你交代了注意事项。很快，就又到了月圆之夜。"
+    "Vous arrivez au domicile de la déléguée à l’informatique.",
+    "La déléguée à l’informatique vous dit : « Ça y est, je comprends. En vous observant, j’ai aussi compris que vous n’aviez aucune mauvaise intention. »",
+    "\"Je pense que dans votre état actuel, vous êtes peut-être plus apte à être l'initiateur de la cérémonie que moi, car vous avez moins de pensées distrayantes depuis que vous avez perdu la mémoire.\"",
+    "La déléguée à l’informatique vous donne quelques consignes. Bientôt revient la nuit de la pleine lune."
   ],
   no: [
-    "你偷偷地来到了信息委员的家中。",
-    "你花了一点时间来了解许知夏的日程安排。",
-    "一个月后，你趁着她出门的时候，偷走了她电脑里面所有的数据。",
-    "很快，就又到了月圆之夜。"
+    "Vous vous introduisez discrètement au domicile de la déléguée à l’informatique.",
+    "Vous avez pris un moment pour comprendre le programme de Xu Zhixia.",
+    "Un mois plus tard, vous avez volé toutes les données de son ordinateur alors qu'elle était absente.",
+    "Bientôt, ce fut à nouveau la nuit de la pleine lune."
   ]
 };
 
 const commonRitualEnding = [
-  "也正因为你的愿望没有被实现，才使得你今天有机会再一次站在这里，启动逆转仪式。",
-  "你的愿望是——"
+  "C'est précisément parce que votre souhait n'a pas été réalisé que vous avez l'opportunité de vous tenir ici à nouveau aujourd'hui et de commencer la cérémonie du renversement.",
+  "Votre souhait est——"
 ];
 
 const brutalWishes = [
-  ["报仇", "报仇"],
-  ["干掉所有知情者", "干掉所有知情者"],
-  ["让他们被献祭，包括自己", "让所有知情者被献祭，包括自己"],
-  ["让他们被献祭，不包括自己", "让所有知情者被献祭，不包括自己"],
-  ["世界末日", "让世界迎来末日"],
-  ["召唤旧日守护者", "召唤旧日守护者"]
+  ["vengeance", "vengeance"],
+  ["Tuez tous ceux qui savent", "Tuez tous ceux qui savent"],
+  ["Qu'ils soient sacrifiés, y compris eux-mêmes", "Que tous ceux qui le savent soient sacrifiés, y compris vous-même"],
+  ["Qu'ils soient sacrifiés, en s'excluant", "Que tous ceux qui le savent soient sacrifiés, à l'exclusion de vous-même"],
+  ["fin du monde", "Que le monde prenne fin"],
+  ["Invoquer l'Ancien", "Invoquer l'Ancien"]
 ];
 
 const greedyWishes = [
-  ["不老不死", "获得不老不死"],
-  ["有钱", "拥有数不尽的财富"],
-  ["后宫佳丽", "拥有后宫佳丽"],
-  ["创造新的世界", "创造一个新的世界"],
-  ["吃不完的美食", "拥有吃不完的美食"],
-  ["更多的愿望", "获得更多的愿望"],
-  ["获得超能力", "获得超能力"],
-  ["全知全能", "成为全知全能的存在"]
+  ["Immortalité", "Obtenez l'immortalité"],
+  ["riche", "Avoir d'innombrables richesses"],
+  ["beautés du harem", "Avoir un harem de beautés"],
+  ["créer un nouveau monde", "créer un nouveau monde"],
+  ["Nourriture sans fin", "Ayez de la nourriture sans fin"],
+  ["plus de vœux", "envie d'en avoir plus"],
+  ["acquérir des super pouvoirs", "acquérir des super pouvoirs"],
+  ["Omniscient et omnipotent", "Devenez un être omniscient et omnipotent"]
 ];
 
 const selfKindWishes = [
-  ["让自己的身体重新变得健康", "让自己的身体重新变得健康"],
-  ["戒掉成瘾品", "戒掉所有令自己成瘾的东西"]
+  ["Rendre votre corps à nouveau en bonne santé", "Rendre votre corps à nouveau en bonne santé"],
+  ["Arrêter la dépendance", "Arrêtez toutes les choses qui vous rendent accro"]
 ];
 
-const animals = ["狗", "猫", "牛", "羊", "猪", "马", "鸡", "鸭", "兔", "老鼠"];
-const plants = ["水稻", "小麦", "玉米", "土豆", "番茄", "苹果树", "松树", "竹子", "玫瑰", "向日葵"];
-const fantasyCreatures = ["龙", "凤凰", "独角兽", "精灵", "人鱼", "天使", "恶魔", "史莱姆", "巨人", "妖狐"];
+const animals = ["chien", "chat", "bœuf", "mouton", "cochon", "cheval", "poulet", "canard", "lapin", "souris"];
+const plants = ["riz", "blé", "maïs", "Pomme de terre", "tomate", "pommier", "pin", "bambou", "Rose", "tournesol"];
+const fantasyCreatures = ["dragon", "Phénix", "licorne", "Elfe", "sirène", "Ange", "démon", "Vase", "géant", "démon renard"];
 
 let typingTimer = 0;
 let typing = false;
@@ -107,101 +107,101 @@ function showChoices(prompt, choices) {
 
 function chooseCompanion(choice) {
   options.hidden = true;
-  typeLine("很好。", () => playSequence([...companionStories[choice], ...commonRitualEnding], showWishRoot));
+  typeLine("très bien.", () => playSequence([...companionStories[choice], ...commonRitualEnding], showWishRoot));
 }
 
 function askCompanion() {
-  showChoices("你是否想让信息委员参与其中？", [
-    { label: "是", action: () => chooseCompanion("yes") },
-    { label: "不是", action: () => chooseCompanion("no") }
+  showChoices("Souhaitez-vous impliquer la déléguée à l’informatique ?", [
+    { label: "Oui", action: () => chooseCompanion("yes") },
+    { label: "Non", action: () => chooseCompanion("no") }
   ]);
 }
 
 function showWishRoot() {
-  showChoices("你的愿望是？", [
-    { label: "救同学", action: () => confirmWish("救回林媛", true) },
-    { label: "不救同学", action: showWishCategories }
+  showChoices("Quel est votre souhait ?", [
+    { label: "Sauvez vos camarades de classe", action: () => confirmWish("Sauver Lin Yuan", true) },
+    { label: "Ne pas sauver ses camarades de classe", action: showWishCategories }
   ]);
 }
 
 function showWishCategories() {
-  showChoices("选择欲望的种类。", [
-    { label: "回到上一步", action: showWishRoot, className: "choice-back" },
-    { label: "善念", action: showKindCategories },
-    { label: "残暴", action: () => showWishList("残暴", brutalWishes) },
-    { label: "贪欲", action: () => showWishList("贪欲", greedyWishes) },
-    { label: "穿越", action: showTravelCategories },
-    { label: "变身", action: showTransformationCategories }
+  showChoices("Choisissez le type de désir.", [
+    { label: "Revenir à l'étape précédente", action: showWishRoot, className: "choice-back" },
+    { label: "gentilles pensées", action: showKindCategories },
+    { label: "brutal", action: () => showWishList("brutal", brutalWishes) },
+    { label: "Avidité", action: () => showWishList("Avidité", greedyWishes) },
+    { label: "voyage dans le temps", action: showTravelCategories },
+    { label: "Transformer", action: showTransformationCategories }
   ]);
 }
 
 function showKindCategories() {
-  showChoices("善念。你希望将幸福与健康给予谁？", [
-    { label: "回到上一步", action: showWishCategories, className: "choice-back" },
-    { label: "自己", action: () => showWishList("给予自己", selfKindWishes, showKindCategories) },
-    { label: "所爱之人", action: () => confirmWish("让所爱之人永远幸福健康", false, showKindCategories) },
-    { label: "自己和所爱之人", action: () => confirmWish("让所爱之人与自己永远幸福健康", false, showKindCategories) },
-    { label: "所有人", action: () => confirmWish("让所有人永远幸福健康", false, showKindCategories) }
+  showChoices("Bonnes pensées. À qui veux-tu offrir du bonheur et de la santé ?", [
+    { label: "Revenir à l'étape précédente", action: showWishCategories, className: "choice-back" },
+    { label: "Propre", action: () => showWishList("donne-toi", selfKindWishes, showKindCategories) },
+    { label: "quelqu'un à aimer", action: () => confirmWish("Que vos proches soient toujours heureux et en bonne santé", false, showKindCategories) },
+    { label: "vous et vos proches", action: () => confirmWish("Laissez vos proches et vous être toujours heureux et en bonne santé", false, showKindCategories) },
+    { label: "tout le monde", action: () => confirmWish("Que tout le monde soit heureux et en bonne santé pour toujours", false, showKindCategories) }
   ]);
 }
 
 function showTravelCategories() {
-  showChoices("穿越。你想去哪里？", [
-    { label: "回到上一步", action: showWishCategories, className: "choice-back" },
-    { label: "回到过去", action: showPastDestinations },
-    { label: "穿越到异世界", action: () => confirmWish("穿越到异世界", false, showTravelCategories) },
-    { label: "穿越到二次元", action: () => confirmWish("穿越到二次元", false, showTravelCategories) }
+  showChoices("voyage dans le temps. Où veux-tu aller ?", [
+    { label: "Revenir à l'étape précédente", action: showWishCategories, className: "choice-back" },
+    { label: "remonter le temps", action: showPastDestinations },
+    { label: "Voyagez dans un autre monde", action: () => confirmWish("Voyagez dans un autre monde", false, showTravelCategories) },
+    { label: "Voyagez dans la deuxième dimension", action: () => confirmWish("Voyagez dans la deuxième dimension", false, showTravelCategories) }
   ]);
 }
 
 function showPastDestinations() {
-  showChoices("你想回到哪个过去？", [
-    { label: "回到上一步", action: showTravelCategories, className: "choice-back" },
-    { label: "古代", action: () => askKeepMemory("古代") },
-    { label: "近代", action: () => askKeepMemory("近代") },
-    { label: "自己小时候", action: () => askKeepMemory("自己小时候") }
+  showChoices("Dans quel passé aimeriez-vous retourner ?", [
+    { label: "Revenir à l'étape précédente", action: showTravelCategories, className: "choice-back" },
+    { label: "l’Antiquité", action: () => askKeepMemory("l’Antiquité") },
+    { label: "l’époque moderne", action: () => askKeepMemory("l’époque moderne") },
+    { label: "votre enfance", action: () => askKeepMemory("votre enfance") }
   ]);
 }
 
 function askKeepMemory(destination) {
-  showChoices("你是否想要保留自己的记忆？", [
-    { label: "回到上一步", action: showPastDestinations, className: "choice-back" },
-    { label: "保留记忆", action: () => confirmWish(`保留记忆回到${destination}`, false, () => askKeepMemory(destination)) },
-    { label: "抛弃记忆", action: () => confirmWish(`抛弃记忆回到${destination}`, false, () => askKeepMemory(destination)) }
+  showChoices("Vous souhaitez conserver vos souvenirs ?", [
+    { label: "Revenir à l'étape précédente", action: showPastDestinations, className: "choice-back" },
+    { label: "conserver ses souvenirs", action: () => confirmWish(`Conserver ses souvenirs et retourner dans ${destination}`, false, () => askKeepMemory(destination)) },
+    { label: "abandonner ses souvenirs", action: () => confirmWish(`Abandonner ses souvenirs et retourner dans ${destination}`, false, () => askKeepMemory(destination)) }
   ]);
 }
 
 function showTransformationCategories() {
-  showChoices("变身。你想成为什么？", [
-    { label: "回到上一步", action: showWishCategories, className: "choice-back" },
-    { label: "成为吸血鬼", action: () => confirmWish("成为吸血鬼", false, showTransformationCategories) },
-    { label: "成为动物", action: () => showNamedTransformations("动物", animals) },
-    { label: "成为植物", action: () => showNamedTransformations("植物", plants) },
-    { label: "成为幻想生物", action: () => showNamedTransformations("幻想生物", fantasyCreatures) },
-    { label: "成为真菌", action: () => confirmWish("成为真菌", false, showTransformationCategories) },
-    { label: "成为细菌", action: () => confirmWish("成为细菌", false, showTransformationCategories) },
-    { label: "成为病毒", action: () => confirmWish("成为病毒", false, showTransformationCategories) }
+  showChoices("Transformer. Que veux-tu être ?", [
+    { label: "Revenir à l'étape précédente", action: showWishCategories, className: "choice-back" },
+    { label: "devenir un vampire", action: () => confirmWish("devenir un vampire", false, showTransformationCategories) },
+    { label: "devenir un animal", action: () => showNamedTransformations("animal", animals) },
+    { label: "devenir une plante", action: () => showNamedTransformations("usine", plants) },
+    { label: "devenir une créature fantastique", action: () => showNamedTransformations("créatures fantastiques", fantasyCreatures) },
+    { label: "devenir un champignon", action: () => confirmWish("devenir un champignon", false, showTransformationCategories) },
+    { label: "devenir des bactéries", action: () => confirmWish("devenir des bactéries", false, showTransformationCategories) },
+    { label: "devenir un virus", action: () => confirmWish("devenir un virus", false, showTransformationCategories) }
   ]);
 }
 
 function showNamedTransformations(category, names) {
-  const wishes = names.map((name) => [name, `成为${name}`]);
-  showWishList(`成为${category}`, wishes, showTransformationCategories);
+  const wishes = names.map((name) => [name, `devenir ${name}`]);
+  showWishList(`Devenez ${category}`, wishes, showTransformationCategories);
 }
 
 function showWishList(category, wishes, categoryBack = showWishCategories) {
-  const choices = [{ label: "回到上一步", action: categoryBack, className: "choice-back" }];
+  const choices = [{ label: "Revenir à l'étape précédente", action: categoryBack, className: "choice-back" }];
   wishes.forEach(([label, result]) => choices.push({
     label,
     action: () => confirmWish(result, false, () => showWishList(category, wishes, categoryBack))
   }));
-  showChoices(`${category}。你想要的是？`, choices);
+  showChoices(`${category}. Que veux-tu ?`, choices);
 }
 
 function confirmWish(wish, savesFriend, back = showWishRoot) {
-  showChoices(`你确定么？这就是你最后的决定：${wish}。`, [
-    { label: "回到上一步", action: back, className: "choice-back" },
-    { label: "确定，这是我最后的决定", action: () => finishChoice(wish, savesFriend) }
+  showChoices(`Es-tu sûr? Ceci est votre décision finale : ${wish}.`, [
+    { label: "Revenir à l'étape précédente", action: back, className: "choice-back" },
+    { label: "OK, c'est ma décision finale", action: () => finishChoice(wish, savesFriend) }
   ]);
 }
 

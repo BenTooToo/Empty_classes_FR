@@ -1,50 +1,50 @@
 const requestedWish = new URLSearchParams(window.location.search).get("wish") || "";
 
 const stories = {
-  "报仇": "所有伤害过你的人都付出了代价。名单上的名字一个接一个消失，直到你发现，仇恨并不会因为无人可恨而结束。",
-  "干掉所有知情者": "所有知情者都从世界上消失了。再也没有人能说出那一晚的真相，也再也没有人能够证明，你曾经拥有过那些朋友。",
-  "让所有知情者被献祭，包括自己": "符咒收走了所有知情者，也包括你。秘密终于安全了，因为世上已经没有任何一个能够记住它的人。",
-  "让所有知情者被献祭，不包括自己": "所有知情者都成为了祭品，只有你被留在原地。你守住了秘密，也成为了这世上唯一还会被秘密折磨的人。",
-  "让世界迎来末日": "月光熄灭后，天再也没有亮起。你得到了一个没有明天的世界，而末日余下的每一秒，都将由你亲眼见证。",
-  "召唤旧日守护者": "他们重新降临到这个世界，崩坏与重建不断重复。你很好奇，人类的理智在伟大存在之前还能够坚持多久。而那之后的事情，就是另外的故事了。",
-  "获得不老不死": "时间从你的身体上绕开。故人、城市与时代不断离去，而你永远停在启动仪式的这一夜。",
-  "拥有数不尽的财富": "你坐拥数不尽的财富，再也没有任何东西是你买不起的。可是接下来，你又会怎样利用这些永远花不完的财富？",
-  "拥有后宫佳丽": "无数人如你所愿来到身边。你得到了所有人的爱慕，却再也无法确认其中是否有任何一份感情出自真心。",
-  "创造一个新的世界": "一个崭新的世界在你面前展开。它没有旧日的罪与遗憾，但它会变成乐园还是另一座深渊，将由你亲手书写。",
-  "拥有吃不完的美食": "餐桌永远丰盛，空盘会在眨眼间再次盛满。你再也不会饥饿，却渐渐忘记了满足究竟是什么滋味。",
-  "获得更多的愿望": "一个愿望变成了无数个愿望。每一次满足都会带来新的欲望，而奥摩耶他始终耐心地等待你支付下一份代价。",
-  "获得超能力": "某种不可思议的力量在你的体内苏醒。世界从此不再遵守你熟悉的规则，而你必须决定要用这份力量成为什么样的人。",
-  "成为全知全能的存在": "过去与未来、真实与可能同时涌入你的意识。你终于无所不知、无所不能，也终于失去了惊喜、疑问与期待。",
-  "让自己的身体重新变得健康": "疼痛与虚弱从身体里退去。你久违地感受到呼吸、奔跑与醒来的轻松，平凡的一天第一次显得如此珍贵。",
-  "戒掉所有令自己成瘾的东西": "那些曾牢牢抓住你的渴望安静了下来。你仍记得它们，却终于能够自己决定下一步要走向哪里。",
-  "让所爱之人永远幸福健康": "你所爱的人从此远离疾病与苦难。你看着他们幸福地生活下去，知道自己的愿望已经抵达了最重要的地方。",
-  "让所爱之人与自己永远幸福健康": "你和所爱之人的伤痛都被抚平。漫长岁月仍会变化，但幸福与健康始终陪伴在你们身边。",
-  "让所有人永远幸福健康": "疾病、痛苦与绝望从每个人身上消失。世界第一次迎来无人被遗忘的幸福，而你的名字并不需要被任何人知道。",
-  "保留记忆回到古代": "你带着全部记忆来到文明尚未定形的古代。原始而辽阔的世界等待探索，每一次发现都可能改变人类未来的方向。",
-  "保留记忆回到近代": "你带着超越时代的知识睁开双眼。你将成为这个时代最前瞻的人类，而历史也会因你的每一个选择产生新的分岔。",
-  "保留记忆回到自己小时候": "你再次看见熟悉的房间和年幼的自己。为了重温美好的童年，又或只是让自己再体验一次美好，你推开了那扇记忆中的门。",
-  "抛弃记忆回到古代": "听老一辈的人说，以前的生活更好。现在轮到你来亲自体验了。你在陌生的古代醒来，已经不记得自己为何来到这里。",
-  "抛弃记忆回到近代": "听老一辈的人说，以前的生活更好。现在轮到你来亲自体验了。你在近代的晨光中醒来，把这里当作了唯一的人生。",
-  "抛弃记忆回到自己小时候": "听老一辈的人说，以前的生活更好。现在轮到你来亲自体验了。你重新成为小时候的自己，往后的美好与遗憾都将第一次发生。",
-  "穿越到异世界": "月光化作一道陌生的门。门后没有学校，也没有你熟悉的规则；一整个异世界正等待你为自己选择新的身份。",
-  "穿越到二次元": "现实的边界变成了纸张与光。你踏入曾隔着屏幕凝望的二次元世界，这一次，你不再只是故事外的观众。",
-  "成为吸血鬼": "你听见血液在每一个活人身体中流动。接下来的千年故事，将会由永不衰老的你亲自书写。",
-  "成为真菌": "你在阴影与土壤中延伸，细密的菌丝连接起另一个庞大的世界。个体的边界变得模糊，生命也有了全新的尺度。",
-  "成为细菌": "世界骤然变得无比辽阔。一滴水就是海洋，一具身体就是星球，而你将在肉眼看不见的地方继续生存。",
-  "成为病毒": "你失去了熟悉的身体，只剩下一段等待复制的信息。你是否仍算活着，已经不再是一个容易回答的问题。"
+  "vengeance": "Tous ceux qui vous ont fait du mal en ont payé le prix. Un par un, les noms de la liste disparaissent jusqu'à ce que vous réalisiez que la haine ne s'arrête pas quand il n'y a personne à haïr.",
+  "Tuez tous ceux qui savent": "Tous ceux qui étaient au courant ont disparu du monde. Personne ne peut dire la vérité sur cette nuit, et personne ne peut prouver que vous avez déjà eu ces amis.",
+  "Que tous ceux qui le savent soient sacrifiés, y compris vous-même": "Le sort enlève tous ceux qui le connaissent, y compris vous. Le secret est enfin préservé car plus personne au monde ne peut s’en souvenir.",
+  "Que tous ceux qui le savent soient sacrifiés, à l'exclusion de vous-même": "Tous ceux qui savaient ont été sacrifiés, et vous seul êtes resté là où vous étiez. Vous avez gardé le secret et êtes devenu la seule personne au monde encore torturée par les secrets.",
+  "Que le monde prenne fin": "Après que le clair de lune se soit éteint, le ciel ne s’est plus jamais éclairé. Vous obtenez un monde sans lendemain et vous serez témoin de chaque seconde restante de la fin de vos propres yeux.",
+  "Invoquer l'Ancien": "Ils sont revenus dans ce monde, et l'effondrement et la reconstruction se sont répétés. Vous vous demandez combien de temps la raison humaine peut tenir devant le Grand Être. Et ce qui se passe ensuite est une autre histoire.",
+  "Obtenez l'immortalité": "Le temps contourne votre corps. De vieux amis, des villes et des époques continuent de partir, mais vous resterez toujours cette nuit de cérémonie de lancement.",
+  "Avoir d'innombrables richesses": "Vous disposez d’une richesse incalculable et il n’y a rien que vous ne puissiez vous permettre. Mais ensuite, comment allez-vous utiliser cette richesse qui ne pourra jamais être dépensée ?",
+  "Avoir un harem de beautés": "D'innombrables personnes viennent vers vous comme vous le souhaitez. Vous êtes aimé de tous, mais vous ne pouvez plus confirmer si l'un de vos sentiments est sincère.",
+  "créer un nouveau monde": "Un nouveau monde s'ouvre devant vous. Il n'a pas les péchés et les regrets du passé, mais s'il se transformera en paradis ou en un autre abîme, cela sera écrit de vos propres mains.",
+  "Ayez de la nourriture sans fin": "La table est toujours pleine et les assiettes vides sont à nouveau remplies en un clin d'œil. Vous n’aurez plus jamais faim, mais peu à peu vous avez oublié ce que l’on ressent lorsqu’on est rassasié.",
+  "envie d'en avoir plus": "Un souhait s'est transformé en d'innombrables souhaits. Chaque satisfaction entraîne de nouveaux désirs et Omoya attend toujours patiemment que vous payiez le prochain prix.",
+  "acquérir des super pouvoirs": "Une puissance incroyable s’éveille en vous. Le monde ne respecte plus les règles que vous connaissez et vous devez décider qui vous voulez être avec ce pouvoir.",
+  "Devenez un être omniscient et omnipotent": "Le passé et le futur, le réel et le possible envahissent votre conscience en même temps. Vous savez enfin tout et pouvez tout faire, et vous perdez enfin vos surprises, vos questions et vos attentes.",
+  "Rendre votre corps à nouveau en bonne santé": "La douleur et la faiblesse ont disparu du corps. Vous ressentez la facilité de respirer, de courir et de vous réveiller pour la première fois depuis longtemps. Pour la première fois, une journée ordinaire semble si précieuse.",
+  "Arrêtez toutes les choses qui vous rendent accro": "Ces désirs qui vous tenaient autrefois se sont calmés. Vous vous en souvenez encore, mais vous êtes enfin en mesure de décider vous-même où aller ensuite.",
+  "Que vos proches soient toujours heureux et en bonne santé": "Vos proches sont libérés de la maladie et de la souffrance. Vous les regardez vivre heureux et savez que vos souhaits ont atteint la place la plus importante.",
+  "Laissez vos proches et vous être toujours heureux et en bonne santé": "Votre douleur et celle de vos proches sont guéries. Les choses changeront avec le temps, mais le bonheur et la santé seront toujours avec vous.",
+  "Que tout le monde soit heureux et en bonne santé pour toujours": "La maladie, la douleur et le désespoir disparaissent chez chacun. Pour la première fois, le monde accueille le bonheur de ne pas oublier et votre nom n’a besoin d’être connu de personne.",
+  "Conserver ses souvenirs et retourner dans l’Antiquité": "Vous emportez tous vos souvenirs dans une Antiquité où la civilisation n’a pas encore pris sa forme définitive. Un monde primitif et immense attend d’être exploré, et chaque découverte pourrait changer l’avenir de l’humanité.",
+  "Conserver ses souvenirs et retourner dans l’époque moderne": "Vous ouvrez les yeux avec des connaissances qui dépassent votre époque. Vous devenez l’une des personnes les plus visionnaires de ce temps, et chacun de vos choix ouvre une nouvelle branche de l’Histoire.",
+  "Conserver ses souvenirs et retourner dans votre enfance": "Vous retrouvez une chambre familière et votre corps d’enfant. Pour revivre les beaux jours ou simplement vous offrir une seconde chance, vous poussez la porte de vos souvenirs.",
+  "Abandonner ses souvenirs et retourner dans l’Antiquité": "On vous a souvent dit qu’autrefois, la vie était meilleure. Vous vous réveillez dans une Antiquité inconnue, sans aucun souvenir de la raison qui vous y a conduit.",
+  "Abandonner ses souvenirs et retourner dans l’époque moderne": "On vous a souvent dit qu’autrefois, la vie était meilleure. Vous vous réveillez à l’époque moderne et acceptez cette existence comme la seule que vous ayez jamais connue.",
+  "Abandonner ses souvenirs et retourner dans votre enfance": "On vous a souvent dit qu’autrefois, la vie était meilleure. Vous redevenez l’enfant que vous étiez ; les joies et les regrets à venir se produiront comme pour la première fois.",
+  "Voyagez dans un autre monde": "Le clair de lune s'est transformé en une porte étrange. Il n’y a pas d’école derrière la porte et il n’y a pas de règles familières ; un tout autre monde vous attend pour choisir une nouvelle identité pour vous-même.",
+  "Voyagez dans la deuxième dimension": "Les frontières de la réalité deviennent papier et lumière. Vous entrez dans le monde bidimensionnel que vous regardiez autrefois à travers l'écran. Cette fois, vous n’êtes plus seulement un public extérieur à l’histoire.",
+  "devenir un vampire": "Vous entendez le sang couler dans chaque corps vivant. L’histoire des mille prochaines années sera écrite par vous qui ne vieillirez jamais.",
+  "devenir un champignon": "Vous vous étendez dans l'ombre et le sol, et le fin mycélium relie un autre monde immense. Les frontières des individus s’estompent et la vie prend une toute nouvelle dimension.",
+  "devenir des bactéries": "Le monde devint soudain extrêmement vaste. Une goutte d’eau est l’océan, un corps est la planète et vous continuerez à exister là où l’œil nu ne peut pas le voir.",
+  "devenir un virus": "Vous perdez votre corps familier et il ne vous reste plus qu'une information en attente de copie. Que vous soyez toujours en vie n’est plus une question facile à répondre."
 };
 
-const animalNames = ["狗", "猫", "牛", "羊", "猪", "马", "鸡", "鸭", "兔", "老鼠"];
-const plantNames = ["水稻", "小麦", "玉米", "土豆", "番茄", "苹果树", "松树", "竹子", "玫瑰", "向日葵"];
-const fantasyNames = ["龙", "凤凰", "独角兽", "精灵", "人鱼", "天使", "恶魔", "史莱姆", "巨人", "妖狐"];
+const animalNames = ["chien", "chat", "bœuf", "mouton", "cochon", "cheval", "poulet", "canard", "lapin", "souris"];
+const plantNames = ["riz", "blé", "maïs", "Pomme de terre", "tomate", "pommier", "pin", "bambou", "Rose", "tournesol"];
+const fantasyNames = ["dragon", "Phénix", "licorne", "Elfe", "sirène", "Ange", "démon", "Vase", "géant", "démon renard"];
 
-const kindWishRegret = "即便如此，那些已经逝去的人，包括林媛，却永远的成为你记忆中的负担。";
+const kindWishRegret = "Même ainsi, ceux qui sont décédés, y compris Lin Yuan, resteront toujours un fardeau dans votre mémoire.";
 const kindWishNames = [
-  "让自己的身体重新变得健康",
-  "戒掉所有令自己成瘾的东西",
-  "让所爱之人永远幸福健康",
-  "让所爱之人与自己永远幸福健康",
-  "让所有人永远幸福健康"
+  "Rendre votre corps à nouveau en bonne santé",
+  "Arrêtez toutes les choses qui vous rendent accro",
+  "Que vos proches soient toujours heureux et en bonne santé",
+  "Laissez vos proches et vous être toujours heureux et en bonne santé",
+  "Que tout le monde soit heureux et en bonne santé pour toujours"
 ];
 
 kindWishNames.forEach((name) => {
@@ -52,25 +52,25 @@ kindWishNames.forEach((name) => {
 });
 
 animalNames.forEach((name) => {
-  stories[`成为${name}`] = `你的身体变成了${name}。人的语言渐渐远去，气味、声音与本能组成了一个从未见过的新世界。`;
+  stories[`devenir ${name}`] = `Votre corps devient ${name}. Le langage humain disparaît progressivement et les odeurs, les sons et les instincts forment un nouveau monde jamais vu auparavant.`;
 });
 plantNames.forEach((name) => {
-  stories[`成为${name}`] = `你扎根土壤，成为了一株${name}。阳光、雨水与四季代替钟表，生命开始以缓慢而安静的方式流动。`;
+  stories[`devenir ${name}`] = `Vous prenez racine dans le sol et devenez un ${name}. Le soleil, la pluie et les quatre saisons remplacent les horloges et la vie commence à s'écouler lentement et tranquillement.`;
 });
 fantasyNames.forEach((name) => {
-  stories[`成为${name}`] = `传说在你身上成为现实。你化作${name}，从此，那些只存在于幻想中的故事也有了真正的见证者。`;
+  stories[`devenir ${name}`] = `Les légendes deviennent réalité en vous. Vous devenez ${name}, et à partir de là, ces histoires qui n'existent que dans la fantasy ont aussi de vrais témoins.`;
 });
 
-const wish = Object.prototype.hasOwnProperty.call(stories, requestedWish) ? requestedWish : "实现自己的愿望";
-const story = stories[wish] || "你的愿望已经实现。至于从今天开始的故事会通向哪里，只有你自己能够回答。";
+const wish = Object.prototype.hasOwnProperty.call(stories, requestedWish) ? requestedWish : "réaliser ton souhait";
+const story = stories[wish] || "Votre souhait est devenu réalité. Jusqu’où mènera l’histoire d’aujourd’hui, vous seul pouvez répondre.";
 const copy = document.querySelector("#desireEndingCopy");
 const endingDescription = document.createElement("p");
 const resultWish = document.createElement("strong");
-endingDescription.append("你成功地");
+endingDescription.append("tu as réussi");
 resultWish.textContent = wish;
 endingDescription.append(resultWish, "。");
 
-const burdenText = "记忆中的负担";
+const burdenText = "fardeau en mémoire";
 const burdenIndex = story.indexOf(burdenText);
 if (burdenIndex === -1) {
   endingDescription.append(story);
@@ -84,4 +84,4 @@ if (burdenIndex === -1) {
   );
 }
 copy.append(endingDescription);
-document.title = `结局3 · ${wish}`;
+document.title = `Fin 3 · ${wish}`;

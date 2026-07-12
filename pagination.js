@@ -67,8 +67,8 @@
     ? `ex${extraNumber}/${totalExtraPages}`
     : `${pageNumber}/${totalMainPages}`;
   const accessibleLabel = extraNumber
-    ? `Extra 第 ${extraNumber} 页，共 ${totalExtraPages} 页`
-    : `游戏主线第 ${pageNumber} 页，共 ${totalMainPages} 页`;
+    ? `Page supplémentaire ${extraNumber} sur ${totalExtraPages}`
+    : `Page principale du jeu ${pageNumber}, total ${totalMainPages}`;
 
   let pageNote = document.querySelector(".page-index-note");
   if (!pageNote) {

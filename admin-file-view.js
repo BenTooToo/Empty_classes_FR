@@ -1,24 +1,24 @@
 const dashboardRoles = {
   monitor: {
-    title: "班长后台",
+    title: "Espace du délégué",
     theme: "dark",
     dashboard: "admin-monitor-dashboard.html",
     files: ["monitor-diary", "monitor-chat", "absence-correction"]
   },
   art: {
-    title: "美术委员后台",
+    title: "Espace de la déléguée aux arts",
     theme: "dark",
     dashboard: "admin-art-dashboard.html",
     files: ["art-diary", "soul-return-ritual"]
   },
   sports: {
-    title: "体育委员后台",
+    title: "Espace du délégué aux sports",
     theme: "dark",
     dashboard: "admin-sports-dashboard.html",
     files: ["hospital-report", "sports-info-removal", "sports-familiar-self"]
   },
   info: {
-    title: "信息委员后台",
+    title: "Espace de la déléguée à l’informatique",
     theme: "dark",
     dashboard: "admin-info-dashboard.html",
     files: ["info-diary-01", "info-diary-02", "info-diary-03"]
@@ -27,136 +27,136 @@ const dashboardRoles = {
 
 const fileRecords = {
   "monitor-diary": {
-    title: "班长日记",
+    title: "Journal du délégué",
     html: `
       <article class="role-diary-paper">
-        <p><strong>仪式是真的</strong>。</p>
-        <p>林媛消失了，真他妈邪门，好消息是，我能感觉到我的<strong>愿望</strong>被实现了，其他人也有同样的感觉，即便我们都没有说出口，但是似乎愿望本身并不需要已语言的形式表达</p>
-        <p>许知夏还在那里装的跟真事儿似的，要是把她一块儿献祭了就好了。她的那点小心思我还不知道，她那个哈希加密程序从创建账号的时候就留在后台里了。只要她有小动作，我就让高远把她宰喽</p>
-        <p class="diary-red-fragment">但是林媛是谁</p>
+        <p><strong>Le rituel est réel</strong>. </p>
+        <p>Lin Yuan a disparu. Quelle putain de chose diabolique. La bonne nouvelle est que je peux sentir que mes <strong>souhaits</strong> ont été exaucés, et d'autres personnes ont le même sentiment. Même si nous ne le disons pas à voix haute, il semble que le désir lui-même n'ait pas besoin d'être exprimé avec des mots.</p>
+        <p>Xu Zhixia fait toujours semblant d'être réel. Ce serait bien si elle était sacrifiée ensemble. Je ne connais pas ses petites astuces, mais son programme de cryptage de hachage est resté en arrière-plan depuis qu'elle a créé le compte. Tant qu'elle fait un petit geste, je laisserai Gao Yuan la tuer</p>
+        <p class="diary-red-fragment">Mais qui est Lin Yuan</p>
         <div class="diary-copy-cipher">
-          <p class="diary-red-fragment diary-cipher-noise">林媛是谁林媛是谁林媛是谁<span class="cipher-scrap scrap-flower">窗下的花朵</span>林媛是谁林媛是谁林媛是谁林媛是谁<span class="cipher-scrap scrap-have">有</span>林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁</p>
-          <p class="diary-red-fragment diary-cipher-noise">林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁<span class="cipher-scrap scrap-star">教室里的星星</span>林媛是谁林媛是谁林媛是谁<span class="cipher-scrap scrap-how">几</span>林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁</p>
-          <p class="diary-red-fragment diary-cipher-noise">林媛是谁<span class="cipher-scrap scrap-life">逝去的生命</span>林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁<span class="cipher-scrap scrap-tyrant">冷血的暴君</span>林媛是谁林媛是谁<span class="cipher-scrap scrap-many">个</span>林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁林媛是谁</p>
+          <p class="diary-red-fragment diary-cipher-noise">Qui est Lin Yuan Qui est Lin Yuan Qui est Lin Yuan<span class="cipher-scrap scrap-flower">Fleurs sous la fenêtre</span> Qui est Lin Yuan Qui est Lin Yuan Qui est Lin Yuan Qui est Lin Yuan<span class="cipher-scrap scrap-have">Oui</span>Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ?</p>
+          <p class="diary-red-fragment diary-cipher-noise">Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ?<span class="cipher-scrap scrap-star">Les étoiles dans la salle de classe</span> Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ?<span class="cipher-scrap scrap-how">Combien</span> Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ?</p>
+          <p class="diary-red-fragment diary-cipher-noise">Qui est Lin Yuan ?<span class="cipher-scrap scrap-life">Les vies disparues</span> Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ?<span class="cipher-scrap scrap-tyrant">Le tyran au sang froid</span> Qui est Lin Yuan ? Qui est Lin Yuan ?<span class="cipher-scrap scrap-many">y en a-t-il</span> Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ? Qui est Lin Yuan ?</p>
         </div>
       </article>
     `
   },
   "monitor-chat": {
-    title: "信息委员聊天记录",
+    title: "Historique des discussions de la déléguée à l’informatique",
     html: `
-      <figure class="chat-screenshot" aria-label="班长与信息委员的聊天记录">
-        <figcaption>恢复文件：monitor_info_chat_20201026.log</figcaption>
+      <figure class="chat-screenshot" aria-label="Historique des discussions entre le délégué de classe et la déléguée à l’informatique">
+        <figcaption>Fichier de récupération : monitor_info_chat_20201026.log</figcaption>
         <div class="chat-window">
           <div class="chat-titlebar">
-            <span>后台私信 / 已恢复片段</span>
+            <span>Messages privés en arrière-plan/clips récupérés</span>
           </div>
           <div class="chat-message chat-right">
-            <strong>许知夏<span class="chat-user-id">quietarchive</span></strong>
-            <p>班长，为什么我没有关于林媛的记忆了</p>
+            <strong>Xu Zhixia<span class="chat-user-id">quietarchive</span></strong>
+            <p>Délégué, pourquoi n’ai-je aucun souvenir de Lin Yuan ?</p>
           </div>
           <div class="chat-message chat-left">
-            <strong>梁致远<span class="chat-user-id">admin-07</span></strong>
-            <p>林媛是谁？</p>
+            <strong>Liang Zhiyuan<span class="chat-user-id">admin-07</span></strong>
+            <p>Qui est Lin Yuan ? </p>
           </div>
           <div class="chat-message chat-right">
-            <strong>许知夏<span class="chat-user-id">quietarchive</span></strong>
-            <p>我知道是你搞的鬼</p>
+            <strong>Xu Zhixia<span class="chat-user-id">quietarchive</span></strong>
+            <p>Je sais que c'était toi</p>
           </div>
           <div class="chat-message chat-right">
-            <strong>许知夏<span class="chat-user-id">quietarchive</span></strong>
-            <p>我说话啊</p>
+            <strong>Xu Zhixia<span class="chat-user-id">quietarchive</span></strong>
+            <p>Je parle</p>
           </div>
           <div class="chat-message chat-right">
-            <strong>许知夏<span class="chat-user-id">quietarchive</span></strong>
-            <p>别逼我去找你</p>
+            <strong>Xu Zhixia<span class="chat-user-id">quietarchive</span></strong>
+            <p>Ne me force pas à te trouver</p>
           </div>
         </div>
       </figure>
     `
   },
   "absence-correction": {
-    title: "缺席名单修正",
+    title: "Correction de la liste des absents",
     html: `
       <dl class="role-file-change-list">
-        <dt>修改日期</dt>
-        <dd>2016-07-09</dd>
-        <dt>修改账号</dt>
+        <dt>Date de modification</dt>
+        <dd>09/07/2016</dd>
+        <dt>Modifier le compte</dt>
         <dd>admin-07</dd>
-        <dt>修改内容</dt>
-        <dd>已成功从学生名单中移除：林缘</dd>
+        <dt>Modifier le contenu</dt>
+        <dd>Supprimé avec succès de la liste des étudiants : Lin Yuan</dd>
       </dl>
     `
   },
   "soul-return-ritual": {
-    title: "奥摩耶他返魂仪式详解",
+    title: "Explication détaillée de la cérémonie de retour de l'âme d'Omoyata",
     html: `
       <article class="role-ritual-document" data-ritual-completion>
-        <h2>奥摩耶他返魂仪式</h2>
+        <h2>Cérémonie de résurrection de l'âme d'Omoyata</h2>
         <div class="ritual-committee-watermark" aria-hidden="true">
           <svg viewBox="0 0 300 300" role="img">
-            <defs><path id="returnWatermarkPath" d="M 34,150 A 116,116 0 1,1 266,150 A 116,116 0 1,1 34,150"></path></defs>
+            <defs><path id="returnWatermarkPath" d="M 34 150 A 116 116 0 1,1 266 150 A 116 116 0 1,1 34 150"></path></defs>
             <circle class="watermark-ring-outer" cx="150" cy="150" r="132"></circle>
             <circle class="watermark-ring-inner" cx="150" cy="150" r="103"></circle>
-            <text class="watermark-ring-text"><textPath href="#returnWatermarkPath" startOffset="8%">由赫伊希尔委员会修正　·　由赫伊希尔委员会修正　·　</textPath></text>
+            <text class="watermark-ring-text"><textPath href="#returnWatermarkPath" startOffset="8%">Modifié par le Comité Heishier·Amendé par le Comité Heishier·</textPath></text>
             <path class="watermark-eye" d="M65 151 Q150 78 235 151 Q150 224 65 151Z"></path>
             <circle class="watermark-iris" cx="150" cy="151" r="42"></circle>
             <circle class="watermark-pupil" cx="150" cy="151" r="18"></circle>
             <circle class="watermark-glint" cx="137" cy="137" r="7"></circle>
           </svg>
         </div>
-        <p class="ritual-document-preface">本仪式为奥摩耶他降魂仪式之反转仪式，用于取回先前被献祭者的灵魂。返魂并非撤销代价，而是以新的祭品完成等价交换。执行者必须完整知晓原仪式的参与名单，并在开始前阅读全部条目。</p>
+        <p class="ritual-document-preface">Ce rituel est l'inversion de la cérémonie de séduction de l'âme Omoyata et est utilisé pour récupérer l'âme de la personne qui a été précédemment sacrifiée. La résurrection ne signifie pas annuler le prix, mais compléter un échange équivalent par un nouveau sacrifice. L'artiste doit connaître parfaitement la liste originale des participants à la cérémonie et lire toutes les inscriptions avant de commencer. </p>
         <section>
-          <h3>时间</h3>
-          <p><strong>原仪式完成之日的周年夜，子时至丑时之间。</strong></p>
-          <p>太阳必须完全缺席，月光不得直接照入仪式场所。返魂须在第一声钟响后开始，并在最后一支蜡烛燃尽前完成；错过时限者应等待下一次周年夜。</p>
+          <h3>Heure</h3>
+          <p><strong>La nuit anniversaire du jour où la cérémonie originale s'est terminée, entre l'heure Zi et l'heure Chou. </strong></p>
+          <p>Le soleil doit être complètement absent et le clair de lune ne doit pas briller directement dans l'espace rituel. La résurrection doit commencer après le premier coup de cloche et s'achever avant que la dernière bougie ne s'éteigne ; ceux qui ne respectent pas le délai devraient attendre la prochaine soirée anniversaire. </p>
         </section>
         <section>
-          <h3>地点</h3>
-          <p>返魂必须在<strong>最初献祭发生之处</strong>进行。符咒中心应与原被献祭者最后停留的位置重合，门窗全部关闭，现场不得有未参与原仪式者旁观。</p>
-          <p>若原地点已经损毁、改建或无法辨认，不得以相似地点代替。错误的地点只会唤回不属于被献祭者的东西。</p>
+          <h3>Lieu</h3>
+          <p>La résurrection doit avoir lieu <strong>là où le sacrifice originel a eu lieu</strong>. Le centre du sort doit coïncider avec le dernier emplacement de la personne sacrifiée. Toutes les portes et fenêtres doivent être fermées et aucune personne n'ayant pas participé à la cérémonie originale ne doit être autorisée à regarder. </p>
+          <p>Si l'emplacement d'origine a été endommagé, modifié ou méconnaissable, un emplacement similaire ne peut pas être remplacé. Un mauvais endroit ne fera que ramener quelque chose qui n'appartient pas à la personne sacrifiée. </p>
         </section>
         <section>
-          <h3>准备与代价</h3>
-          <p><strong>一、原仪式全部参与者的灵魂。</strong></p>
-          <p><strong>二、原被献祭者遗留之物一件。</strong></p>
-          <p><strong>三、倒置的奥摩耶他符咒一份。</strong></p>
-          <p>全部参与者的灵魂将被同时献出，以此换回被献祭者完整的灵魂。无论参与者在原仪式中获得了什么、是否仍记得仪式、是否自愿返还，均不影响代价的收取。</p>
+          <h3>Préparation et Prix</h3>
+          <p><strong>1. Les âmes de tous les participants à la cérémonie originale. </strong></p>
+          <p><strong>2. Une chose laissée par la personne qui a été initialement sacrifiée. </strong></p>
+          <p><strong>3. Une copie du charme Omoyata inversé. </strong></p>
+          <p>Les âmes de tous les participants seront sacrifiées en même temps en échange de l'âme complète de la personne sacrifiée. Peu importe ce que les participants ont gagné lors de la cérémonie originale, qu'ils se souviennent encore de la cérémonie ou qu'ils le rendent volontairement, cela n'affectera pas la perception du prix. </p>
         </section>
         <section>
-          <h3>特例：被神明抛弃者</h3>
-          <p>原仪式中<strong>未被神明接受、愿望未被实现之人，不属于仪式参与者</strong>。此人已被神明遗忘，其灵魂不在返魂所需的祭品之列。</p>
-          <p>执行返魂时，无须也不得献出被抛弃者的灵魂。将其强行写入名单可能使返还的灵魂出现缺损。</p>
+          <h3>Cas particulier : ceux abandonnés par les dieux</h3>
+          <p>Ceux qui n'ont <strong>pas été acceptés par les dieux et dont les souhaits n'ont pas été exaucés lors de la cérémonie originale ne sont pas considérés comme des participants à la cérémonie</strong>. Cette personne a été oubliée des dieux et son âme ne fait pas partie des sacrifices requis pour son retour. </p>
+          <p>Lors de la récupération de l'âme, l'âme de la personne abandonnée n'a pas besoin et ne doit pas être sacrifiée. Les forcer à être inclus dans la liste peut entraîner des imperfections chez les âmes renvoyées. </p>
         </section>
         <section>
-          <h3>仪式步骤</h3>
-          <p>将遗留之物置于倒置符咒正中，依原仪式站位写下全部有效参与者的姓名。施法者最后进入符咒，在钟声停止前依次抹去姓名，使其灵魂归入中心祭品。</p>
-          <p>当全部姓名消失后，施法者应呼唤被献祭者的姓名三次。不得回答符咒外传来的声音，也不得在被献祭者睁眼前离开原位。</p>
+          <h3>Étapes rituelles</h3>
+          <p>Placez l'objet restant au centre du talisman inversé et écrivez les noms de tous les participants valides selon les positions rituelles d'origine. Le lanceur de sorts lance le sort en dernier, effaçant les noms un par un avant que les cloches ne cessent, permettant ainsi à leurs âmes d'être transférées vers l'offrande centrale. </p>
+          <p>Lorsque tous les noms disparaissent, le lanceur de sorts doit appeler le nom de la victime trois fois. Ils ne sont pas autorisés à répondre à la voix venant de l'extérieur du sort, ni à quitter leur position avant que la personne sacrifiée n'ouvre les yeux. </p>
         </section>
         <section>
-          <h3>结果与施法者的愿望</h3>
-          <p>交换完成后，被献祭者的灵魂将被带回，并重新归于其原本的身体。若身体已不复存在，灵魂会选择与其联系最深的可容之物。</p>
-          <p>作为完成返魂的见证者，<strong>施法者可在被献祭者复活的同时实现一个愿望</strong>。愿望不需要说出口；奥摩耶他读取的仍是施法者灵魂最深处的欲望。</p>
-          <p>愿望一经读取，不可撤回。返魂完成后，所有作为代价献出的灵魂亦不可再次取回。</p>
+          <h3>Résultats et souhaits des casteurs</h3>
+          <p>Une fois l'échange terminé, l'âme de la personne sacrifiée sera ramenée et rendue dans son corps d'origine. Si le corps n’existe plus, l’âme choisira l’objet accommodé avec lequel elle a le lien le plus profond. </p>
+          <p>En tant que témoin de l'achèvement de la renaissance, <strong>le lanceur de sorts peut exaucer un vœu</strong> pendant que la victime est ressuscitée. Le souhait n’a pas besoin d’être exprimé ; ce que lit Omoye est toujours le désir le plus profond de l'âme du lanceur de sorts. </p>
+          <p>Une fois le souhait lu, il ne peut plus être retiré. Une fois la récupération des âmes terminée, toutes les âmes sacrifiées en guise de prix ne peuvent plus être récupérées. </p>
         </section>
-        <a class="ritual-reversal-button" href="23-true-ending.html">做好准备，进行逆转仪式</a>
+        <a class="ritual-reversal-button" href="23-true-ending.html">Préparez-vous pour le rituel d'inversion</a>
       </article>
     `
   },
   "shadow-exchange-ritual": {
-    title: "奥摩耶他降魂仪式详解",
+    title: "Explication détaillée de la cérémonie de séduction de l'âme d'Omoyata",
     html: `
       <article class="role-ritual-document">
-        <h2>奥摩耶他降魂仪式</h2>
+        <h2>Cérémonie de séduction de l'âme Omoyata</h2>
         <div class="ritual-committee-watermark" aria-hidden="true">
           <svg viewBox="0 0 300 300" role="img">
             <defs>
-              <path id="committeeWatermarkPath" d="M 34,150 A 116,116 0 1,1 266,150 A 116,116 0 1,1 34,150"></path>
+              <path id="committeeWatermarkPath" d="M 34 150 A 116 116 0 1,1 266 150 A 116 116 0 1,1 34 150"></path>
             </defs>
             <circle class="watermark-ring-outer" cx="150" cy="150" r="132"></circle>
             <circle class="watermark-ring-inner" cx="150" cy="150" r="103"></circle>
             <text class="watermark-ring-text">
-              <textPath href="#committeeWatermarkPath" startOffset="8%">由赫伊希尔委员会修正　·　由赫伊希尔委员会修正　·　</textPath>
+              <textPath href="#committeeWatermarkPath" startOffset="8%">Amendé par le comité Heischer·Amendé par le comité Heiseel·</textPath>
             </text>
             <path class="watermark-eye" d="M65 151 Q150 78 235 151 Q150 224 65 151Z"></path>
             <circle class="watermark-iris" cx="150" cy="151" r="42"></circle>
@@ -164,183 +164,183 @@ const fileRecords = {
             <circle class="watermark-glint" cx="137" cy="137" r="7"></circle>
           </svg>
         </div>
-        <p class="ritual-document-preface">本仪式用于向奥摩耶他呈交灵魂，并使全部仪式参与者取得陈述欲望的权利。仪式一经开始，不得任意中止、转移或更换被献祭者。执行前请完整阅读下列条目。</p>
+        <p class="ritual-document-preface">Ce rituel est utilisé pour présenter l'âme à Omoyata et donne à tous les participants au rituel le droit d'exprimer leurs désirs. Une fois la cérémonie commencée, la victime ne peut être interrompue, transférée ou remplacée à volonté. Veuillez lire entièrement les éléments suivants avant d'exécuter. </p>
         <section>
-          <h3>时间</h3>
-          <p><strong>太阳缺席之时。</strong></p>
-          <p>仪式不得在太阳仍可被目视、或其余晖尚未完全消退时进行。满月必须自仪式开始直至结束持续见证全部过程。</p>
+          <h3>Heure</h3>
+          <p><strong>Quand le soleil est absent. </strong></p>
+          <p>Les rituels ne peuvent pas être effectués tant que le soleil est encore visible ou lorsque la lumière restante n'a pas complètement disparu. La pleine lune doit continuer à être témoin de tout le processus du début à la fin de la cérémonie. </p>
         </section>
         <section>
-          <h3>地点</h3>
-          <p>仪式地点必须处于<strong>海平面以上七百五十米</strong>的高度，并能够接受满月的完整照射。仪式场所应有飞蛾停留，以其作为边界与灵魂之间的守护者。</p>
-          <p>若仪式高度低于海平面以上七百五十米，可能引发海的愤怒。为了消解浪潮的不安情绪，请参考<strong>《托尔法典》第七十五页</strong>所载安抚与补救条目。</p>
+          <h3>Lieu</h3>
+          <p>Le lieu de la cérémonie doit être à une altitude de <strong>750 mètres</strong> au-dessus du niveau de la mer et être entièrement éclairé par la pleine lune. Le lieu rituel devrait abriter des papillons de nuit qui agissent comme des gardiens entre les frontières et les esprits. </p>
+          <p>Si la hauteur de la cérémonie est inférieure à 750 mètres au-dessus du niveau de la mer, elle risque de déclencher la colère de la mer. Pour soulager le malaise de la vague, veuillez vous référer aux éléments apaisants et curatifs de la <strong>Page 75 du Code de Thor</strong>. </p>
         </section>
         <section>
-          <h3>准备工作</h3>
-          <p><strong>一、被献祭者的灵魂，一份。</strong></p>
-          <p><strong>二、奥摩耶他符咒，一份。</strong></p>
-          <p>符咒必须在仪式开始前完整铺设，不得存在缺口、重描或被外物遮挡的部分。被献祭者及其灵魂应被视为同一份祭品，不得拆分计数。</p>
+          <h3>Préparation</h3>
+          <p><strong>1. Une part de l'âme de la victime. </strong></p>
+          <p><strong>2. Omoyata Talisman, une portion. </strong></p>
+          <p>Le sort doit être complètement posé avant le début de la cérémonie, et il ne doit y avoir aucun espace, superposition ou partie obscurcie par des objets étrangers. La victime et son âme seront considérées comme un seul sacrifice et ne seront pas comptées séparément. </p>
         </section>
         <section>
-          <h3>仪式步骤与限制</h3>
-          <p>被献祭者必须处于奥摩耶他符咒的正中间。施法期间，被献祭者的身体与灵魂均不得离开符咒边界；任何形式的拖拽、移动、替换或自行离开，均视为仪式异常。</p>
-          <p>确认满月仍在见证、飞蛾仍在守护且符咒边界完整后，方可开始施法。施法者应维持仪式，直至全部参与者的欲望被确认接纳。</p>
-          <p>若仪式期间出现符咒破损、飞蛾离去、月光中断、祭品越界或其他无法解释的情况，请立即参考<strong>《托尔法典》第七十五页</strong>，不得依照个人判断擅自修正。</p>
+          <h3>Étapes rituelles et restrictions</h3>
+          <p>La victime doit être au centre du talisman Omoyata. Lors du lancement du sort, le corps et l'âme de la personne sacrifiée ne sont pas autorisés à quitter les limites du sort ; toute forme de traîner, déplacer, remplacer ou sortir tout seul sera considérée comme une anomalie rituelle. </p>
+          <p>Ce n'est qu'après avoir confirmé que la pleine lune est toujours présente, que les papillons de nuit gardent toujours et que les limites du sort sont intactes que vous pourrez commencer à lancer le sort. Le lanceur de sorts doit continuer le rituel jusqu'à ce que les souhaits de tous les participants aient été reconnus. </p>
+          <p>Si le sort est brisé, les papillons de nuit s'en vont, le clair de lune est interrompu, le sacrifice franchit la frontière ou d'autres circonstances inexplicables se produisent pendant la cérémonie, veuillez vous référer immédiatement à la <strong>Page 75 du Code Thor</strong> et n'apportez aucune modification basée sur votre jugement personnel. </p>
         </section>
         <section>
-          <h3>结果</h3>
-          <p>参与仪式的所有人，包括被献祭者，均有权提出自己的欲望。此处所称欲望并非口头之语，也不以书写、手势或任何外在表达为必要条件；仪式所读取的，是隐藏在灵魂栖息之所的、最为深沉的愿望。</p>
-          <p>仪式完成后，愿望将被自动实现，不论其内容为何，亦不因提出者的身份、立场或是否理解其后果而改变。</p>
-          <p>若愿望未被实现，则说明提出者已经被众神遗忘。发生此情形时，请求助于图书管理员或所信任之人，并尽快进行净化仪式。净化仪式的准备与执行方法，请参考<strong>《托尔法典》第九十九页</strong>。</p>
+          <h3>Résultats</h3>
+          <p>Toute personne participant au rituel, y compris la personne sacrifiée, a le droit d'exprimer ses désirs. Les désirs mentionnés ici ne sont pas des mots prononcés et ne nécessitent pas non plus d'écriture, de gestes ou aucune expression extérieure ; ce que lit le rituel est le désir le plus profond caché dans le lieu où vit l'âme. </p>
+          <p>Une fois la cérémonie terminée, le souhait sera automatiquement réalisé, quel que soit son contenu, et ne changera pas en raison de l'identité, de la position ou de la compréhension des conséquences du proposant. </p>
+          <p>Si le souhait n'est pas exaucé, cela signifie que celui qui le propose a été oublié par les dieux. Lorsque cela se produit, demandez l’aide d’un bibliothécaire ou d’une personne de confiance et effectuez un rituel de purification dès que possible. Pour la préparation et l'exécution du rituel de purification, veuillez vous référer à la <strong>Page 99 du Code Thor</strong>. </p>
         </section>
       </article>
     `
   },
   "art-profile": {
-    title: "个人简介",
+    title: "Profil",
     html: `
       <figure class="role-file-photo">
-        <img src="../lin-ruoxuan.png" alt="林若萱公开资料照片">
-        <figcaption>林若萱第六次举办个人画展</figcaption>
+        <img src="../lin-ruoxuan.png" alt="Photo de profil public de Lin Ruoxuan">
+        <figcaption>Lin Ruoxuan tient sa sixième exposition personnelle</figcaption>
       </figure>
-      <p>林若萱，出生于折棠市，中国青年艺术家。公开资料显示，她早年在折棠市第六中学就读，并曾担任班级美术委员，后以个人绘画创作进入公众视野。</p>
-      <p>其作品常被评论为具有强烈的层次感与象征性，题材多与记忆、空间和人物关系有关。2020年后，关于林若萱的公开活动记录明显减少。</p>
-      <p>公开访谈中，林若萱曾提到中学阶段对色彩和图案的兴趣较早形成。相关同学录资料也显示，她在班级活动中经常负责海报、装饰和活动素材。</p>
+      <p>Lin Ruoxuan, née dans la ville de Zhetang, est une jeune artiste chinoise. Les informations publiques indiquent qu'elle a étudié au lycée n°6 de Zhetang et qu'elle y était déléguée aux arts. Plus tard, ses créations picturales l'ont fait connaître du public.</p>
+      <p>Ses œuvres sont souvent considérées comme ayant un fort sens de superposition et de symbolisme, et leurs thèmes sont principalement liés à la mémoire, à l'espace et aux relations entre les personnages. Après 2020, les enregistrements des activités publiques de Lin Ruoxuan ont considérablement diminué. </p>
+      <p>Lors d'entretiens publics, Lin Ruoxuan a expliqué que son intérêt pour les couleurs et les motifs s'était manifesté dès le lycée. Les archives de la classe montrent également qu'elle était souvent chargée des affiches, des décorations et du matériel destiné aux activités scolaires.</p>
     `
   },
   "art-news": {
-    title: "入院新闻",
+    title: "Actualités des admissions",
     html: `
       <figure class="role-file-photo">
-        <img src="../lin-ruoxuan-ambulance-cn-final.png" alt="医护人员将林若萱送上救护车的现场照片">
-        <figcaption>现场流出的照片显示，医护人员正将林若萱送上救护车。</figcaption>
+        <img src="../lin-ruoxuan-ambulance-cn-final.png" alt="Photo de la scène où le personnel médical a mis Lin Ruoxuan dans l'ambulance">
+        <figcaption> Des photos divulguées sur les lieux montraient que le personnel médical mettait Lin Ruoxuan dans une ambulance. </figcaption>
       </figure>
-      <p>青年画家林若萱在工作室突发意外，疑似因长期接触污染颜料导致中毒昏迷。目前林若萱仍在医院接受治疗。</p>
-      <p>院方暂时没有给出准确答复。知情人士称，林若萱入院时情况已经非常严重，意识恢复可能性极低。相关颜料来源正在进一步调查中。</p>
+      <p>Le jeune peintre Lin Ruoxuan a eu un accident dans son atelier et a été soupçonné d'être empoisonné et dans le coma en raison d'une exposition à long terme à de la peinture contaminée. Lin Ruoxuan est toujours soigné à l'hôpital. </p>
+      <p>L'hôpital n'a pas encore donné de réponse précise. Des personnes proches du dossier ont déclaré que l'état de Lin Ruoxuan était déjà très grave lorsqu'elle a été admise à l'hôpital et que la possibilité de reprendre conscience était extrêmement faible. La source des pigments concernés fait l’objet d’une enquête plus approfondie. </p>
     `
   },
   "ritual-note": {
-    title: "仪式转存记录",
+    title: "Dossier de transfert de cérémonie",
     html: `
-      <p>这份内容来自黑箱同城的旧帖子，标题被管理员改成了<strong>奥窟耶他仪式</strong>。帖子说明声称，毕业前夜在空教室完成仪式，可以让在场者实现愿望。</p>
-      <p>仪式要求提前准备咒语和符咒。转存文本里写得很清楚：<strong>仪式详解，解释需要提前准备好血染的符咒和咒语</strong>。美术委员林若萱后来提供了符咒，她说只是照着论坛图片临摹。</p>
-      <p>帖子最危险的地方在“献祭”一词。梁致远以为献祭意味着把某个人从大家的生活里抹掉，却没人知道真正的意思是附身。</p>
-      <p>页面末尾有一行损坏代码：<strong>符咒代码</strong>。它指向一个被删掉的画作页面，只有信息委员的备份里还留着副本。</p>
+      <p>Ce contenu provient d'un ancien message de Blackbox City. Le titre a été changé par l'administrateur en <strong>Cérémonie Oku Yata</strong>. La légende du message affirme que l'accomplissement du rituel dans une salle de classe vide à la veille de la remise des diplômes permettra aux personnes présentes de réaliser leurs souhaits. </p>
+      <p>Le rituel exige de préparer à l’avance les incantations et le talisman. Le texte sauvegardé est explicite : <strong>le talisman taché de sang et l’incantation doivent être prêts avant la cérémonie</strong>. Lin Ruoxuan, déléguée aux arts, a ensuite fourni le talisman, affirmant l’avoir simplement recopié depuis une image du forum.</p>
+      <p>La partie la plus dangereuse du message est le mot « sacrifice ». Liang Zhiyuan pensait que le sacrifice signifiait effacer quelqu'un de la vie de chacun, mais personne ne savait que le véritable sens était la possession. </p>
+      <p>Une ligne de code corrompu apparaît à la fin de la page : <strong>code du talisman</strong>. Elle renvoie vers une page d’œuvre supprimée, dont seule la sauvegarde de la déléguée à l’informatique conserve encore une copie.</p>
     `
   },
   "art-diary": {
-    title: "美术委员日记",
+    title: "Journal de la déléguée aux arts",
     html: `
       <article class="role-diary-paper art-villain-diary">
-        <p>最开始，我只是在黑箱论坛里找能让事业顺利一点的办法。没想到那篇帖子写的东西竟然是真的。</p>
-        <p>我把内容给了梁致远，又告诉他该怎么准备符咒。他果然上钩了。只需要让他觉得自己才是组织者，他就会替我召集所有人、准备地点，还会心甘情愿地承担风险。</p>
-        <p>我对结果很满意。大家都拿到了自己想要的东西：我得到了事业上的成功，梁致远的两个朋友得到了钱财。至于梁致远那个傻瓜，到最后竟然还在装善良，许下的愿望居然是<strong>让所有人忘记这件事发生过</strong>。</p>
-        <p>最大的变数一直是林媛。被献祭者同样能够实现愿望，如果她想要的是报复，那我们就全完了。所以我才特地选了她——班里出了名的老好人。像她那样的人，即使到了最后，也只会希望别人过得好。</p>
-        <p>倒是肖青让我有点在意。我不知道他许了什么愿望，问他，他也不肯说。还是得好好观察他。</p>
-        <p>如果他真的会坏事，那就再献祭一次，把他除掉。</p>
-        <p class="role-file-signature">2016年7月10日　林若萱</p>
+        <p>Au début, je cherchais simplement des moyens de faire en sorte que ma carrière se déroule sans problème dans les forums de boîtes noires. Je ne m’attendais pas à ce que ce qui était écrit dans ce message soit vrai. </p>
+        <p>J'ai donné le contenu à Liang Zhiyuan et lui ai expliqué comment préparer le sort. Effectivement, il a mordu à l’hameçon. Tant qu'il se sentait organisateur, il rassemblait tout le monde, préparait le lieu et prenait volontiers des risques pour moi. </p>
+        <p>Je suis très satisfait des résultats. Tout le monde a obtenu ce qu'il voulait : j'ai eu du succès dans ma carrière et les deux amis de Liang Zhiyuan ont eu de l'argent. Quant à cet imbécile de Liang Zhiyuan, il faisait toujours semblant d'être gentil à la fin, et son souhait était de <strong>laisser tout le monde oublier que cela s'était produit</strong>. </p>
+        <p>La plus grande variable a toujours été Lin Yuan. La victime obtient également que ses souhaits soient exaucés, et si elle veut se venger, nous sommes tous foutus. C’est pourquoi je l’ai spécifiquement choisie : une bonne personne bien connue dans la classe. Les gens comme elle, même en fin de compte, ne souhaiteront que du bien aux autres. </p>
+        <p>C'est Xiao Qing qui m'inquiète un peu. Je ne savais pas ce qu’il souhaitait et si je le lui demandais, il ne le dirait pas. Il faut quand même le surveiller de près. </p>
+        <p>S'il veut vraiment faire de mauvaises choses, alors sacrifiez-le à nouveau pour vous débarrasser de lui. </p>
+        <p class="role-file-signature">10 juillet 2016 Lin Ruoxuan</p>
       </article>
     `
   },
   "class-album": {
-    title: "班级相册",
+    title: "Album photos de classe",
     html: `
       <div class="role-file-gallery">
-        <figure><img src="../sport.png" alt="秋季运动会合照"><figcaption>2014 秋季运动会</figcaption></figure>
-        <figure><img src="../spring.png" alt="春游合照"><figcaption>2015 春游合照</figcaption></figure>
-        <figure><img src="../dimpome.png" alt="毕业前的教室合照"><figcaption>2016 毕业前的教室</figcaption></figure>
-        <figure><img src="../credit.png" alt="窗边街景"><figcaption>熟悉的街景</figcaption></figure>
-        <figure><img src="../art.png" alt="美术相关照片"><figcaption>林若萱是我们的骄傲</figcaption></figure>
-        <figure><img src="../computer.png" alt="机房照片"><figcaption>大家最喜欢的地方</figcaption></figure>
+        <figure><img src="../sport.png" alt="Photo de la rencontre sportive d'automne"><figcaption>Réunion sportive d'automne 2014</figcaption></figure>
+        <figure><img src="../spring.png" alt="Photo de groupe de la sortie du printemps"><figcaption>Photo de groupe de la sortie du printemps 2015</figcaption></figure>
+        <figure><img src="../dimpome.png" alt="Photo de classe avant l'obtention du diplôme"><figcaption>Classe 2016 avant l'obtention du diplôme</figcaption></figure>
+        <figure><img src="../credit.png" alt="Scène de rue avec fenêtre"><figcaption>Scène de rue familière</figcaption></figure>
+        <figure><img src="../art.png" alt="Photos liées à l'art"><figcaption>Lin Ruoxuan est notre fierté</figcaption></figure>
+        <figure><img src="../computer.png" alt="Photo de la salle informatique"><figcaption>L'endroit préféré de tous</figcaption></figure>
       </div>
     `
   },
   "hospital-report": {
-    title: "病例",
+    title: "cas",
     html: `
-      <p>患者姓名：肖青。该病例由旧系统扫描件转存为只读文本。</p>
-      <p>主诉记录里写着：患者长期回避高三毕业前后的记忆，反复否认曾参与某次夜间外出。家属称其高考后情绪急剧波动，睡眠差，易惊醒。</p>
-      <p>医生初步判断为<strong>怀疑因为高考出现心理问题</strong>，但后续复诊中又记录了更具体的症状：患者会对“班长”“七个人”“小青”等词产生明显回避。</p>
-      <p>检查意见：<strong>出现失忆症状</strong>，建议心理咨询配合药物治疗。治疗方案栏写着：<strong>建议治疗方案：药物治疗</strong>。但报告最后另有手写字迹：“他不是忘了，是不敢想起来。”</p>
+      <p>Nom du patient : Xiao Qing. Le cas a été transféré d'une copie numérisée de l'ancien système vers un texte en lecture seule. </p>
+      <p>Le dossier de plainte principal indique : Le patient a longtemps évité ses souvenirs avant et après l'obtention de son diplôme d'études secondaires et a nié à plusieurs reprises avoir jamais participé à une sortie nocturne. Les membres de sa famille ont déclaré qu'après l'examen d'entrée à l'université, son humeur avait fortement fluctué, son sommeil était médiocre et il se réveillait facilement. </p>
+      <p>Le médecin soupçonnait d’abord des <strong>troubles psychologiques liés au Gaokao</strong>, mais les consultations suivantes ont fait apparaître des symptômes plus précis : le patient évitait manifestement des mots comme « délégué », « sept personnes » et « Xiao Qing ».</p>
+      <p>Avis d'examen : <strong>Des symptômes d'amnésie apparaissent</strong>. Une consultation psychologique et un traitement médicamenteux sont recommandés. La colonne du plan de traitement indique : <strong>Plan de traitement recommandé : traitement médicamenteux</strong>. Mais il y avait une écriture à la fin du rapport : "Ce n'est pas qu'il a oublié, mais il n'a pas osé y penser."</p>
     `
   },
   "sports-info-removal": {
-    title: "信息修改记录",
+    title: "Enregistrement de modification des informations",
     html: `
       <dl class="role-file-change-list">
-        <dt>修改日期</dt>
-        <dd>2016-07-09</dd>
-        <dt>修改账号</dt>
-        <dd>qx17（肖青）</dd>
-        <dt>修改范围</dt>
-        <dd>网站全部公开信息</dd>
-        <dt>修改内容</dt>
-        <dd>已成功从网站的所有信息中移除：肖青</dd>
+        <dt>Date de modification</dt>
+        <dd>09/07/2016</dd>
+        <dt>Modifier le compte</dt>
+        <dd>qx17 (Xiao Qing)</dd>
+        <dt>Modifier la plage</dt>
+        <dd>Toutes les informations publiques sur le site Web</dd>
+        <dt>Modifier le contenu</dt>
+        <dd>Supprimé avec succès de toutes les informations du site Web : Xiao Qing</dd>
       </dl>
     `
   },
   "sports-familiar-self": {
-    title: "熟悉的字迹",
+    title: "écriture familière",
     html: `
       <article class="role-diary-paper">
-        <p>我和林媛是被班长邀请去参加那场仪式的。班长威胁我，说除非我把林媛带过来，否则就要献祭我。我没有想到仪式竟然是真的，更没有想到林媛真的会消失。</p>
-        <p>据说参加仪式的每个人都可以实现愿望，包括林媛。可是，只有我的愿望没有实现。难道这就是神明对我的惩罚？</p>
-        <p>我感觉最近自己的记忆力和判断力越来越糟糕。希望这不是某个人许下的愿望吧……</p>
-        <p>如果可以的话，我会请信息委员黑掉美术委员的账号。据说仪式的具体信息都在她的账号里。但是我现在真的好累。等明天如果感觉好一点，我就这么做吧。</p>
-        <p class="role-file-signature">2016-07-20　肖青</p>
-        <p class="truth-revealed"><a href="34-author-note.html">恭喜你，查明了事情的真相，肖青。</a></p>
+        <p>Lin Yuan et moi avons été invités à la cérémonie par le délégué. Il m’a menacé : si je ne faisais pas venir Lin Yuan, c’est moi qui serais sacrifié. Je ne pensais pas que la cérémonie était réelle, encore moins que Lin Yuan disparaîtrait vraiment.</p>
+        <p>On dit que tous ceux qui participent à la cérémonie peuvent voir leurs souhaits se réaliser, y compris Lin Yuan. Cependant, seul mon souhait ne s'est pas réalisé. Est-ce la punition de Dieu pour moi ? </p>
+        <p>J'ai l'impression que ma mémoire et mon jugement se détériorent ces derniers temps. J'espère que ce n'est pas un souhait fait par quelqu'un...</p>
+        <p>Si possible, je demanderai à la déléguée à l’informatique de pirater le compte de la déléguée aux arts. Il paraît que les détails de la cérémonie se trouvent dans son compte. Mais je suis vraiment épuisé. Si je me sens mieux demain, je le ferai.</p>
+        <p class="role-file-signature">20/07/2016 Xiao Qing</p>
+        <p class="truth-revealed"><a href="34-author-note.html">Félicitations, vous avez découvert la vérité, Xiao Qing. </a></p>
       </article>
     `
   },
   "recovery-login": {
-    title: "恢复登录",
+    title: "Restaurer la connexion",
     html: `
-      <p>恢复登录需要输入一个词：<strong>真相</strong>。页面没有再询问用户名，因为它已经知道访问者是谁。</p>
-      <p>系统提示：你尚有一次未使用的愿望。仪式没有失败，只是你在崩溃前没有说出口。</p>
-      <p>可选项一：<strong>使用自己的愿望</strong>，让女孩回来，恢复原样。页面警告：信息委员将从网站中失踪，所有被神恩改写过的记录会重新结算。</p>
-      <p>可选项二：<strong>满足自己的愿望，享受荣华富贵，女孩失踪</strong>。页面没有解释代价，只在按钮下面写了一句：“奥窟耶他从不白给任何人。”</p>
-      <p>这里不是普通登录。它是在问肖云，是否愿意承认自己就是肖青，是否愿意把最后一份没有使用的愿望交出去。</p>
+      <p>La guérison ne nécessite qu'un seul mot : <strong>Vérité</strong>. La page ne demande pas de nom d'utilisateur car elle sait déjà qui est le visiteur. </p>
+      <p>Invite système : vous avez encore un souhait inutilisé. Le rituel n'a pas échoué, vous ne l'avez simplement pas dit avant de craquer. </p>
+      <p>Option 1 : <strong>utiliser votre propre souhait</strong> pour ramener la jeune fille et lui rendre son état d’origine. Avertissement : la déléguée à l’informatique disparaîtra du site et tous les enregistrements réécrits par la grâce divine seront réinitialisés.</p>
+      <p>Option 2 : <strong>Réalisez vos souhaits, profitez de la gloire et de la richesse, et la fille disparaît</strong>. La page n'explique pas le prix, mais écrit seulement une phrase sous le bouton : "Okuye ne le donne jamais à personne pour rien."</p>
+      <p>Ceci n'est pas une connexion normale. Il s'agissait de demander à Xiao Yun s'il était prêt à admettre qu'il était Xiao Qing et s'il était prêt à abandonner son dernier souhait inutilisé. </p>
     `
   },
   "info-diary-01": {
-    title: "信息委员日记 1",
+    title: "Journal de la déléguée à l’informatique 1",
     html: `
       <article class="role-diary-paper">
-        <p>班长的<strong>管理员</strong>账号太好猜了，竟然用自己的宠物狗的名字作为密码，这样一来，仪式的完整信息也就得到了，一切都已经快要完成了，我一定要让媛媛有一个好的归宿。</p>
-        <p class="role-file-signature">2020年6月18日　许知夏</p>
+        <p>Le compte <strong>Administrateur</strong> du délégué était si facile à deviner qu’il avait même choisi le nom de son chien comme mot de passe. J’ai ainsi obtenu toutes les informations sur la cérémonie. Tout est presque terminé. Je dois offrir un bon foyer à Yuanyuan.</p>
+        <p class="role-file-signature">18 juin 2020 Xu Zhixia</p>
       </article>
     `
   },
   "info-diary-02": {
-    title: "信息委员日记 2",
+    title: "Journal de la déléguée à l’informatique 2",
     html: `
       <article class="role-diary-paper">
-        <p>媛媛失踪前一天来找过我。她说班长约了几个人去学校，说毕业前再做一次“只有自己人知道”的活动。</p>
-        <p>她不太想去，但又怕扫大家的兴。她还说运动委员也会去，美术委员准备了纸和图案，班长的三个朋友负责看门。</p>
-        <p>我问她是不是恶作剧，她说不知道，只听见他们提到一个从论坛上看到的办法。<strong>那天她告诉我，说和班长还有别的同学出去，然后失踪了</strong>。</p>
-        <p>所有人都说她可能离家出走，后来又说我们班根本没有这个人。只有网站不肯承认这件事，它总是把她的名字从别人的备注里顶出来。</p>
-        <p>把哈希值用哈希加密，我可能是一个天才吧，就算他们有人能够破译一次，也永远不会想到连着破译两次吧，哈哈……原始密码的话，那就设置为今天的日期就好了。</p>
+        <p>Yuanyuan est venue me voir la veille de sa disparition. Elle a déclaré que le surveillant de la classe avait invité quelques personnes à l'école et leur avait dit qu'elles feraient une autre activité avant l'obtention du diplôme, que "seuls leurs propres élèves connaissaient". </p>
+        <p>Elle ne voulait pas y aller, mais elle avait peur de décevoir tout le monde. Elle a aussi dit que le délégué aux sports serait présent, que la déléguée aux arts avait préparé le papier et les motifs, et que les trois amis du délégué de classe monteraient la garde.</p>
+        <p>Je lui ai demandé si c’était une plaisanterie. Elle m’a répondu qu’elle n’en savait rien et qu’elle les avait seulement entendus parler d’une méthode trouvée sur le forum. <strong>Ce jour-là, elle m’a dit qu’elle sortait avec le délégué et d’autres camarades de classe, puis elle a disparu.</strong></p>
+        <p>Tout le monde a dit qu'elle s'était peut-être enfuie de chez elle, et a ensuite déclaré qu'il n'y avait personne de ce type dans notre classe. Seul le site Web a refusé de l'admettre et a toujours exclu son nom des commentaires des autres. </p>
+        <p>Utilisez le chiffrement par hachage pour chiffrer la valeur de hachage. Je suis peut-être un génie. Même si quelqu'un peut le déchiffrer une fois, il ne pensera jamais à le déchiffrer deux fois de suite, haha... Pour le mot de passe d'origine, définissez-le simplement sur la date d'aujourd'hui. </p>
       </article>
     `
   },
   "info-diary-03": {
-    title: "信息委员日记 3",
+    title: "Journal de la déléguée à l’informatique 3",
     html: `
       <article class="role-diary-paper">
-        <p>我终于知道还剩谁了。不是梁致远，不是林若萱，也不是那三个跟在班长后面的人。他们都已经被返魂录找到了。</p>
-        <p>还剩一个人。那个人当年也在现场，却把自己的名字从学生名单里抹掉了。现在他叫肖云，可我记得媛媛以前叫他<strong>小青</strong>。</p>
-        <p>旧名单里写的是<strong>肖青</strong>。如果他真的什么都不记得，为什么连名字都换了？为什么一看到“七月重大事件”就不敢继续点？</p>
-        <p><strong>当时的目击者还剩下一个竟然失忆了，还给自己换了个名字，有用么</strong>。网站会找到他的。媛媛也会。</p>
+        <p>Je sais enfin qui il reste. Ce n’est ni Liang Zhiyuan, ni Lin Ruoxuan, ni les trois personnes qui suivaient le délégué. Le Registre du retour des âmes les a tous retrouvés.</p>
+        <p>Il ne reste plus qu'une personne. Cette personne était également présente, mais son nom a été rayé de la liste des étudiants. Maintenant, son nom est Xiao Yun, mais je me souviens que Yuanyuan l'appelait <strong>Xiao Qing</strong>. </p>
+        <p>Le nom dans l'ancienne liste était <strong>Xiao Qing</strong>. S'il ne se souvenait vraiment de rien, pourquoi avait-il changé de nom ? Pourquoi n'osez-vous pas cliquer sur « Événements majeurs de juillet » lorsque vous le voyez ? </p>
+        <p><strong>L'un des témoins restants à cette époque a en fait perdu la mémoire et a même changé de nom. Était-ce utile ?</strong> Le site le trouvera. Yuanyuan le fera aussi. </p>
       </article>
     `
   },
   "soul-return-log": {
-    title: "返魂记录",
+    title: "Retour à l'enregistrement de l'âme",
     html: `
-      <p>记录状态：<strong>招魂已经成功，不可逆转</strong>。页面说明里写，除非让现场所有见证者承认并归还所得，否则被请来的东西不会离开。</p>
-      <p>返魂名单一共七人。<strong>班长，已经死亡，返魂结果成功</strong>。林若萱，返魂结果成功，现实状态为<strong>植物人</strong>。魏兆、方砚、赵临三人的状态分别记录为煤气中毒、滑雪事故、夜间坠落。</p>
-      <p>名单最底部缺了一行。系统提示：<strong>缺了一个同学的名字</strong>。备注栏只有两个字：自己。</p>
-      <p>返魂录的解释非常简单：返魂不是让死人回来，而是让活人的一部分交出去。<strong>归魂也就是让自己的灵魂分给林媛同学</strong>。谁在当年得到了愿望，谁就该还。</p>
+      <p>Statut de l'enregistrement : <strong>L'invocation a été réussie et irréversible</strong>. La description de la page indique que les objets invités ne partiront pas à moins que tous les témoins présents sur les lieux n'accusent réception et ne restituent les bénéfices. </p>
+      <p>Le registre du retour des âmes compte sept personnes. <strong>Le délégué est mort ; le retour de son âme a réussi.</strong> Celui de Lin Ruoxuan a également réussi, et son état actuel est <strong>végétatif</strong>. Pour Wei Zhao, Fang Yan et Zhao Lin, les causes consignées sont respectivement une intoxication au gaz, un accident de ski et une chute nocturne.</p>
+      <p>Il manque une ligne en bas de la liste. Invite système : <strong>Le nom d'un camarade de classe est manquant</strong>. Il n'y a que deux mots dans la colonne des remarques : moi-même. </p>
+      <p>L'explication du récit du retour d'âme est très simple : le retour d'âme ne consiste pas à ramener les morts, mais à remettre une partie de la personne vivante. <strong>Rendre son âme signifie partager son âme avec son camarade de classe Lin Yuan</strong>. Celui qui a réalisé son souhait à l'époque devrait le rendre. </p>
     `
   }
 };
@@ -357,8 +357,8 @@ const content = document.querySelector("#detailContent");
 
 if (!role || !record || !role.files.includes(fileId)) {
   document.body.classList.add("theme-light");
-  title.textContent = "无法读取文件";
-  content.innerHTML = "<p>文件不存在，或当前账号没有访问权限。</p>";
+  title.textContent = "Impossible de lire le fichier";
+  content.innerHTML = "<p>Le fichier n'existe pas, ou le compte courant n'a pas de droits d'accès. </p>";
 } else {
   document.body.classList.add(`theme-${role.theme}`, `theme-${roleId}`);
   document.title = `${record.title} - ${role.title}`;

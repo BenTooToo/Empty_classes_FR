@@ -1,131 +1,137 @@
 const searchRecords = [
   {
-    title: "黑箱同城论坛",
-    type: "黑箱百科",
+    title: "Forum de la ville boîte noire",
+    type: "Encyclopédie de la boîte noire",
     href: "pages/38-heixiang-forum-intro.html",
-    keys: ["黑箱", "黑箱同城", "黑箱同城论坛"],
-    text: "全球最知名的论坛网站，以都市传说、奇闻轶事闻名，不少故事至今仍有网友讨论。"
+    keys: ["boîte noire", "Ville boîte noire", "Forum de la ville boîte noire"],
+    text: "Le site de forum le plus célèbre au monde est célèbre pour ses légendes urbaines et ses anecdotes, dont beaucoup sont encore discutées par les internautes aujourd'hui."
   },
   {
-    title: "委员会",
-    type: "未知",
+    title: "Comité de Heysir",
+    type: "inconnu",
     href: "pages/32-heysir-committee.html",
-    keys: ["赫伊希尔委员会", "赫伊希尔"]
+    keys: ["Comité de Heysir", "Heysir"]
   },
   {
-    title: "请同学赶紧发送照片以便网站保存",
-    type: "公告",
+    title: "Merci d'envoyer les photos rapidement afin qu'elles puissent être enregistrées sur le site",
+    type: "annonce",
     href: "pages/03-photo-submit-notice.html",
-    keys: ["公告", "本站公告"]
+    keys: ["annonce", "Annonce de ce site"]
   },
   {
-    title: "请勿散播谣言",
-    type: "公告",
+    title: "Ne répandez pas de rumeurs",
+    type: "annonce",
     href: "pages/04-stop-maintenance-notice.html",
-    keys: ["公告", "本站公告"]
+    keys: ["annonce", "Annonce de ce site"]
   },
   {
-    title: "福安饭心理咨询服务推荐",
-    type: "公告",
+    title: "Services de conseil psychologique recommandés à Fu'anfan",
+    type: "annonce",
     href: "pages/26-fuanfan-counseling-notice.html",
-    keys: ["福安饭", "福安家常饭馆"]
+    keys: ["Riz Fu'an", "Restaurant de cuisine maison Fu'an"]
   },
   {
-    title: "班级相册",
-    type: "相册",
+    title: "Album photos de classe",
+    type: "photo album",
     href: "pages/05-class-album.html",
-    keys: ["班级相册", "相册","2015春游_湖边合照"]
+    keys: ["album","Album photos de classe", "photo album","Sortie du printemps 2015_Photo au bord du lac"]
   },
   {
-    title: "折棠市第六中学",
-    type: "黑箱百科",
+    title: "Lycée n°6 de Zhetang",
+    type: "Encyclopédie de la boîte noire",
     href: "pages/06-zhetang-six-intro.html",
-    keys: ["折棠6中", "折棠六中", "折棠市", "折棠市第六中学"]
+    keys: ["lycée 6 Zhetang", "sixième lycée de Zhetang", "ville de Zhetang", "lycée n°6 de Zhetang"]
   },
   {
-    title: "管理员登录",
-    type: "站点入口",
+    title: "Connexion administrateur",
+    type: "Entrée du site",
     href: "admin.html",
-    keys: ["管理员"]
+    keys: ["administrateur", "admin", "admistrateur"]
   },
   {
-    title: "错误",
+    title: "erreur",
     href: "pages/admin-file-view.html?role=monitor&file=absence-correction",
-    keys: ["缺席", "缺席名单"]
+    keys: ["absent", "liste des absents"]
   },
   {
-    title: "学生名单",
-    type: "名单",
+    title: "liste des étudiants",
+    type: "liste",
     href: "pages/09-student-roster.html",
-    keys: ["学生名单", "信息委员", "美术委员","班长"]
+    keys: [
+      "liste des élèves",
+      "Liang Zhiyuan", "Liang", "Zhiyuan", "délégué de classe",
+      "Xu Zhixia", "Xu", "Zhixia", "déléguée à l’informatique",
+      "Lin Ruoxuan", "Lin", "Ruoxuan", "déléguée aux arts",
+      "Xiao Qing", "Xiao", "Qing", "délégué aux sports"
+    ]
   },
   {
-    title: "截图",
-    type: "照片",
+    title: "capture d'écran",
+    type: "photo",
     href: "pages/28-zhang-yuhang-call-record.html",
-    keys: ["张宇航"]
+    keys: ["Zhang Yuhang", "Zhang", "Yuhang", "Liang Zhiyuan", "Liang", "Zhiyuan"]
   },
   {
-    title: "林若萱",
-    type: "黑箱百科",
+    title: "Lin Ruoxuan",
+    type: "Encyclopédie de la boîte noire",
     href: "pages/24-lin-ruoxuan-profile.html",
-    keys: ["林若萱"]
+    keys: ["Lin Ruoxuan", "Lin", "Ruoxuan"]
   },
   {
-    title: "本2兔",
-    type: "黑箱百科",
+    title: "ben2lapin",
+    type: "Encyclopédie de la boîte noire",
     href: "pages/27-ben2tu-profile.html",
-    keys: ["本2兔", "本二兔", "ben2tu", "bilibili", "折棠6中同窗录作者"]
+    keys: ["ben2lapin", "Ben Ertu", "ben2tu", "bilibili", "auteur de l'annuaire des anciens du lycée n°6 de Zhetang"]
   },
   {
-    title: "哈希函数",
-    type: "黑箱百科",
+    title: "Fonction de hachage",
+    type: "Encyclopédie de la boîte noire",
     href: "pages/30-hash-function-intro.html",
-    keys: ["哈希", "哈希函数", "hash","哈希加密","哈希值"]
+    keys: ["Hacher", "Fonction de hachage", "hash","Cryptage de hachage","valeur de hachage"]
   },
   {
-    title: "煎饼控制系统有限公司官方网站",
-    type: "官网",
+    title: "Site officiel de Jianbing Control System Co., Ltd.",
+    type: "Site officiel",
     href: "pages/35-pancake-control.html",
-    keys: ["煎饼", "煎饼控制系统", "煎饼控制有限公司", "煎饼控制系统有限公司"]
+    keys: ["Crêpes", "Système de contrôle des crêpes", "Contrôle des crêpes Ltd.", "Systèmes de contrôle des crêpes Ltd."]
   },
   {
-    title: "突发",
-    type: "娱乐新闻",
+    title: "soudain",
+    type: "actualités du divertissement",
     href: "pages/25-lin-ruoxuan-news.html",
-    keys: ["林若萱"]
+    keys: ["Lin Ruoxuan", "Lin", "Ruoxuan"]
   },
   {
-    title: "班长和我的密码",
-    type: "日记",
+    title: "Le délégué et mon mot de passe",
+    type: "journal",
     href: "pages/admin-file-view.html?role=info&file=info-diary-01",
-    keys: ["许知夏"]
+    keys: ["Xu Zhixia", "Xu", "Zhixia"]
   },
   {
-    title: "日记2",
-    type: "日记",
+    title: "Journal 2",
+    type: "journal",
     href: "pages/admin-file-view.html?role=info&file=info-diary-02",
     keys: []
   },
   {
-    title: "我的日记3：信息委员",
-    type: "日记",
+    title: "Mon journal 3 : déléguée à l’informatique",
+    type: "journal",
     href: "pages/admin-file-view.html?role=info&file=info-diary-03",
-    keys: ["我的日记3", "小青", "目击者", "换了名字"]
+    keys: ["Mon journal 3", "Xu Zhixia", "Xu", "Zhixia", "Xiao Qing", "Xiao", "Qing", "Xiaoqing", "témoin", "nom changé"]
   },
 
   {
-    title: "悬案：学校网站惊现幽灵少女",
-    type: "娱乐新闻",
+    title: "Affaire non résolue : une fille fantôme apparaît sur le site Web de l'école",
+    type: "actualités du divertissement",
     href: "pages/29-ghost-girl-news.html",
-    keys: ["幽灵少女", "悬案"]
+    keys: ["fille fantôme", "cas non résolu"]
   },
  
   {
-    title: "奥摩耶他降魂仪式，真的可以实现愿望",
-    type: "黑箱论坛",
+    title: "La cérémonie de séduction de l'âme d'Omoya peut vraiment réaliser votre souhait",
+    type: "Forum boîte noire",
     href: "pages/31-omoyeta-ritual-thread.html",
-    keys: ["奥摩耶他降魂仪式", "奥摩耶他", "降魂仪式"]
+    keys: ["Cérémonie de séduction de l'âme Omoyata", "Omoyata", "Cérémonie de séduction de l'âme"]
   },
   
 ];
@@ -137,7 +143,30 @@ const modal = document.querySelector("#searchModal");
 const closeButton = document.querySelector("#closeSearchModal");
 
 function normalize(value) {
-  return value.trim().toLowerCase();
+  return value
+    .trim()
+    .toLocaleLowerCase("fr")
+    .replace(/œ/g, "oe")
+    .replace(/æ/g, "ae")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ");
+}
+
+function matchesQuery(key, query) {
+  const normalizedKey = normalize(key);
+
+  if (normalizedKey === query) {
+    return true;
+  }
+
+  if (query.length < 3) {
+    return false;
+  }
+
+  return normalizedKey.startsWith(query) || normalizedKey
+    .split(/[\s'’_-]+/)
+    .some((part) => part.startsWith(query));
 }
 
 function renderEmpty(message) {
@@ -156,7 +185,7 @@ function renderResults(query, matches) {
   `).join("");
 
   resultBox.innerHTML = `
-    <p class="result-summary">关键词：${query}，找到 ${matches.length} 条旧记录。</p>
+    <p class="result-summary">Mot-clé : ${query} · ${matches.length} résultat${matches.length > 1 ? "s" : ""}.</p>
     <ul class="result-list">${items}</ul>
   `;
 }
@@ -178,17 +207,17 @@ form.addEventListener("submit", (event) => {
 
   const query = normalize(input.value);
   if (!query) {
-    renderEmpty("请输入关键词。支持姓名、相册名、旧记录编号。");
+    renderEmpty("Veuillez saisir des mots-clés. Prend en charge le nom, le nom de l'album, l'ancien numéro d'enregistrement.");
     openModal();
     return;
   }
 
   const matches = searchRecords.filter((record) => {
-    return record.keys.some((key) => normalize(key) === query);
+    return record.keys.some((key) => matchesQuery(key, query));
   });
 
   if (!matches.length) {
-    renderEmpty(`没有找到“${query}”的公开记录。请尝试更早的姓名、编号或维护记录关键词。`);
+    renderEmpty(`Aucun enregistrement public trouvé pour "${query}". Veuillez essayer un nom, un numéro ou un mot-clé de dossier de maintenance antérieur.`);
     openModal();
     return;
   }
