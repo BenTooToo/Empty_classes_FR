@@ -1,0 +1,10 @@
+平时开发：
+Commit to main
+→ Push origin
+
+同步原版：
+终端执行 fetch upstream
+→ GitHub Desktop 选择 Merge into current branch
+→ 选择 upstream/main
+→ 解决冲突并测试
+→ Push origin
