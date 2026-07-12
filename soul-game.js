@@ -50,11 +50,11 @@ const map = [
 
 const camera = { x: 6.7, y: 25.5, angle: -Math.PI / 2 };
 const portraits = [
-  { x:2.1, y:1.16, width:.86, letter:'O', name:'Xiao Qing', role:'délégué aux sports', status:'âme intacte', image:'../pics/broken-mirror-portrait.svg' },
-  { x:4.55, y:1.16, width:.86, letter:'H', name:'Wei Zhao', role:'Un des amis du délégué', status:'perdre l\'âme', image:'../pics/friend1.png' },
-  { x:7, y:1.16, width:.86, letter:'X', name:'Fang Yan', role:'Deuxième ami du délégué', status:'perdre l\'âme', image:'../pics/friend2.png' },
-  { x:9.45, y:1.16, width:.86, letter:'A', name:'Lin Ruoxuan', role:'déléguée aux arts', status:'perdre l\'âme', image:'../lin-ruoxuan.png' },
-  { x:11.9, y:1.16, width:.86, letter:'S', name:'Liang Zhiyuan', role:'délégué de classe', status:'perdre l\'âme', image:'../pics/admin.png' }
+  { x:2.1, y:1.16, width:.86, letter:'O', name:'Thomas Dubois', role:'délégué aux sports', status:'âme intacte', image:'../pics/broken-mirror-portrait.svg' },
+  { x:4.55, y:1.16, width:.86, letter:'H', name:'Maxime Bernard', role:'Un des amis du délégué', status:'perdre l\'âme', image:'../pics/friend1.png' },
+  { x:7, y:1.16, width:.86, letter:'X', name:'Nicolas Petit', role:'Deuxième ami du délégué', status:'perdre l\'âme', image:'../pics/friend2.png' },
+  { x:9.45, y:1.16, width:.86, letter:'A', name:'Élise Martin', role:'déléguée aux arts', status:'perdre l\'âme', image:'../lin-ruoxuan.png' },
+  { x:11.9, y:1.16, width:.86, letter:'S', name:'Julien Moreau', role:'délégué de classe', status:'perdre l\'âme', image:'../pics/admin.png' }
 ];
 
 const correctPortraitSequence = 'SHXAO';

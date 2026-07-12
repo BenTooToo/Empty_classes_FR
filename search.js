@@ -3,7 +3,7 @@ const searchRecords = [
     title: "Forum de la ville boîte noire",
     type: "Encyclopédie de la boîte noire",
     href: "pages/38-heixiang-forum-intro.html",
-    keys: ["boîte noire", "Ville boîte noire", "Forum de la ville boîte noire"],
+    keys: ["boîte noire", "Black Box City", "Forum de la ville boîte noire"],
     text: "Le site de forum le plus célèbre au monde est célèbre pour ses légendes urbaines et ses anecdotes, dont beaucoup sont encore discutées par les internautes aujourd'hui."
   },
   {
@@ -32,9 +32,9 @@ const searchRecords = [
   },
   {
     title: "Album photos de classe",
-    type: "photo album",
+    type: "album photo",
     href: "pages/05-class-album.html",
-    keys: ["album","Album photos de classe", "photo album","Sortie du printemps 2015_Photo au bord du lac"]
+    keys: ["album","Album photos de classe", "album photo","Sortie du printemps 2015_Photo au bord du lac"]
   },
   {
     title: "Lycée n°6 de Zhetang",
@@ -59,29 +59,29 @@ const searchRecords = [
     href: "pages/09-student-roster.html",
     keys: [
       "liste des élèves",
-      "Liang Zhiyuan", "Liang", "Zhiyuan", "délégué de classe",
-      "Xu Zhixia", "Xu", "Zhixia", "déléguée à l’informatique",
-      "Lin Ruoxuan", "Lin", "Ruoxuan", "déléguée aux arts",
-      "Xiao Qing", "Xiao", "Qing", "délégué aux sports"
+      "Julien Moreau", "Julien", "Moreau", "délégué de classe",
+      "Camille Laurent", "Camille", "Laurent", "déléguée à l’informatique",
+      "Élise Martin", "Élise", "Elise", "Martin", "déléguée aux arts",
+      "Thomas Dubois", "Thomas", "Dubois", "délégué aux sports"
     ]
   },
   {
     title: "capture d'écran",
     type: "photo",
     href: "pages/28-zhang-yuhang-call-record.html",
-    keys: ["Zhang Yuhang", "Zhang", "Yuhang", "Liang Zhiyuan", "Liang", "Zhiyuan"]
+    keys: ["Antoine Lefèvre", "Antoine", "Lefèvre", "Lefevre", "Julien Moreau", "Julien", "Moreau"]
   },
   {
-    title: "Lin Ruoxuan",
+    title: "Élise Martin",
     type: "Encyclopédie de la boîte noire",
     href: "pages/24-lin-ruoxuan-profile.html",
-    keys: ["Lin Ruoxuan", "Lin", "Ruoxuan"]
+    keys: ["Élise Martin", "Élise", "Elise", "Martin"]
   },
   {
     title: "ben2lapin",
     type: "Encyclopédie de la boîte noire",
     href: "pages/27-ben2tu-profile.html",
-    keys: ["ben2lapin", "Ben Ertu", "ben2tu", "bilibili", "auteur de l'annuaire des anciens du lycée n°6 de Zhetang"]
+    keys: ["ben2tu", "bilibili", "auteur de l'annuaire des anciens du lycée n°6 de Zhetang"]
   },
   {
     title: "Fonction de hachage",
@@ -99,13 +99,13 @@ const searchRecords = [
     title: "soudain",
     type: "actualités du divertissement",
     href: "pages/25-lin-ruoxuan-news.html",
-    keys: ["Lin Ruoxuan", "Lin", "Ruoxuan"]
+    keys: ["Élise Martin", "Élise", "Elise", "Martin"]
   },
   {
     title: "Le délégué et mon mot de passe",
     type: "journal",
     href: "pages/admin-file-view.html?role=info&file=info-diary-01",
-    keys: ["Xu Zhixia", "Xu", "Zhixia"]
+    keys: ["Camille Laurent", "Camille", "Laurent"]
   },
   {
     title: "Journal 2",
@@ -117,7 +117,7 @@ const searchRecords = [
     title: "Mon journal 3 : déléguée à l’informatique",
     type: "journal",
     href: "pages/admin-file-view.html?role=info&file=info-diary-03",
-    keys: ["Mon journal 3", "Xu Zhixia", "Xu", "Zhixia", "Xiao Qing", "Xiao", "Qing", "Xiaoqing", "témoin", "nom changé"]
+    keys: ["Mon journal 3", "Camille Laurent", "Camille", "Laurent", "Thomas Dubois", "Thomas", "Hugo Dubois", "Hugo", "Dubois", "témoin", "nom changé"]
   },
 
   {
@@ -128,10 +128,10 @@ const searchRecords = [
   },
  
   {
-    title: "La cérémonie de séduction de l'âme d'Omoya peut vraiment réaliser votre souhait",
+    title: "La rituel d’invocation des âmes d'Omoyata peut vraiment réaliser votre souhait",
     type: "Forum boîte noire",
     href: "pages/31-omoyeta-ritual-thread.html",
-    keys: ["Cérémonie de séduction de l'âme Omoyata", "Omoyata", "Cérémonie de séduction de l'âme"]
+    keys: ["Rituel d’invocation des âmes d’Omoyata", "Omoyata", "rituel d’invocation", "invocation des âmes"]
   },
   
 ];

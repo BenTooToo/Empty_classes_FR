@@ -3,7 +3,7 @@ const accounts = [
     id: "monitor",
     displayName: "délégué",
     aliases: ["admin-07"],
-    passwords: ["damao"],
+    passwords: ["biscotte"],
     href: "pages/admin-monitor-dashboard.html"
   },
   {
@@ -16,7 +16,7 @@ const accounts = [
   },
   {
     id: "sports",
-    displayName: "Xiao Qing — délégué aux sports",
+    displayName: "Thomas Dubois — délégué aux sports",
     aliases: ["qx17"],
     passwords: ["m04"],
     href: "pages/admin-sports-dashboard.html"
@@ -41,10 +41,10 @@ const loadingLine = document.querySelector("#loadingLine");
 const loadingBar = document.querySelector("#loadingBar");
 
 const loadingSteps = [
-  { text: "Vérification des autorisations du compte...", width: "26%" },
-  { text: "Lecture de la liste des fichiers d'arrière-plan...", width: "54%" },
-  { text: "Restauration du miroir en lecture seule...", width: "78%" },
-  { text: "Vérification réussie, ouverture de l'arrière-plan...", width: "100%" }
+  { text: "Vérification des droits d’accès…", width: "26%" },
+  { text: "Chargement des fichiers administratifs…", width: "54%" },
+  { text: "Chargement de la copie archivée…", width: "78%" },
+  { text: "Accès autorisé. Ouverture du tableau de bord…", width: "100%" }
 ];
 
 function normalize(value) {

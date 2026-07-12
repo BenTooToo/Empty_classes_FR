@@ -14,7 +14,14 @@ const installationTimeButtons = document.querySelectorAll("[data-installation-ti
 let installationInviteTimer;
 
 function normalizeAddressPart(value) {
-  return value.trim().replace(/\s+/g, "").replace(/[７]/g, "7").replace(/[８]/g, "8");
+  return value
+    .trim()
+    .toLocaleLowerCase("fr")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[°º№'’.,\-\s]/g, "")
+    .replace(/[７]/g, "7")
+    .replace(/[８]/g, "8");
 }
 
 function showQueryModal() {
@@ -64,10 +71,17 @@ addressQuery.addEventListener("submit", (event) => {
   const road = normalizeAddressPart(addressQuery.elements.road.value);
   const houseNumber = normalizeAddressPart(addressQuery.elements["house-number"].value);
 
-  if (
-    road === normalizeAddressPart("7ème route de Cangsong") &&
-    houseNumber === normalizeAddressPart("N° 78")
-  ) {
+  const acceptedRoads = [
+    "7e rue Cangsong",
+    "7ème rue Cangsong",
+    "rue Cangsong 7",
+    "7e route de Cangsong",
+    "Cangsong 7th Road",
+    "苍松7路"
+  ].map(normalizeAddressPart);
+  const acceptedHouseNumbers = ["78", "n° 78", "numéro 78", "78号"].map(normalizeAddressPart);
+
+  if (acceptedRoads.includes(road) && acceptedHouseNumbers.includes(houseNumber)) {
     showQueryModal();
     return;
   }

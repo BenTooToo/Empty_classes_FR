@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion au backend de Zhetang 6</title>
+  <title>Connexion à l’administration du lycée n°6 de Zhetang</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="admin-page">
@@ -11,7 +11,7 @@
     <header class="admin-header">
       <div>
         <p class="admin-kicker">ZT6 CLASS ARCHIVE</p>
-        <h1>Système de gestion back-end</h1>
+        <h1>Interface d’administration</h1>
       </div>
       <span class="admin-state" id="adminState">Vérification du compte</span>
     </header>
@@ -25,7 +25,7 @@
 
           <label for="adminPassword">mot de passe</label>
           <input id="adminPassword" name="password" type="password" required aria-describedby="passwordHint" data-history-key="admin-password">
-          <p class="admin-field-hint" id="passwordHint">Le mot de passe ne prend en charge que les lettres minuscules anglaises.</p>
+          <p class="admin-field-hint" id="passwordHint">Le mot de passe doit être saisi uniquement en lettres latines minuscules.</p>
 
           <button type="submit">Se connecter</button>
           <p class="admin-message" id="adminMessage" role="status" aria-live="polite"></p>
@@ -33,7 +33,7 @@
       </section>
 
       <section class="admin-loading-panel" id="loadingPanel" hidden aria-live="polite">
-        <h2>Entrer dans l'arrière-plan</h2>
+        <h2>Accès à l’administration</h2>
         <div class="admin-loading-box">
           <p id="loadingLine">Vérification des autorisations du compte...</p>
           <div class="admin-loading-track">
@@ -45,7 +45,7 @@
     </main>
 
     <footer class="admin-footer">
-      <a href="school.html">Retour à la page d'accueil de la liste des camarades de classe</a>
+      <a href="school.html">Retour à l’annuaire</a>
     </footer>
   </div>
 

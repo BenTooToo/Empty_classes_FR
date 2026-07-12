@@ -3,9 +3,9 @@ const options = document.querySelector("#endingChoiceOptions");
 const hint = document.querySelector("#endingChoiceHint");
 
 const intro = [
-  "Vous êtes Xiao Qing.",
+  "Vous êtes Thomas Dubois.",
   "Vous êtes un participant au rituel, un paria, un amnésique et un explorateur.",
-  "Vous décidez de ressusciter Lin Yuan, votre ami."
+  "Vous décidez de ressusciter votre amie, Léa Martin."
 ];
 
 const companionStories = {
@@ -17,7 +17,7 @@ const companionStories = {
   ],
   no: [
     "Vous vous introduisez discrètement au domicile de la déléguée à l’informatique.",
-    "Vous avez pris un moment pour comprendre le programme de Xu Zhixia.",
+    "Vous avez pris un moment pour comprendre le programme de Camille Laurent.",
     "Un mois plus tard, vous avez volé toutes les données de son ordinateur alors qu'elle était absente.",
     "Bientôt, ce fut à nouveau la nuit de la pleine lune."
   ]
@@ -40,10 +40,10 @@ const brutalWishes = [
 const greedyWishes = [
   ["Immortalité", "Obtenez l'immortalité"],
   ["riche", "Avoir d'innombrables richesses"],
-  ["beautés du harem", "Avoir un harem de beautés"],
+  ["être entouré de personnes séduisantes", "Être entouré de personnes séduisantes"],
   ["créer un nouveau monde", "créer un nouveau monde"],
   ["Nourriture sans fin", "Ayez de la nourriture sans fin"],
-  ["plus de vœux", "envie d'en avoir plus"],
+  ["obtenir davantage de vœux", "Obtenir davantage de vœux"],
   ["acquérir des super pouvoirs", "acquérir des super pouvoirs"],
   ["Omniscient et omnipotent", "Devenez un être omniscient et omnipotent"]
 ];
@@ -107,7 +107,7 @@ function showChoices(prompt, choices) {
 
 function chooseCompanion(choice) {
   options.hidden = true;
-  typeLine("très bien.", () => playSequence([...companionStories[choice], ...commonRitualEnding], showWishRoot));
+  typeLine("Très bien.", () => playSequence([...companionStories[choice], ...commonRitualEnding], showWishRoot));
 }
 
 function askCompanion() {
@@ -119,7 +119,7 @@ function askCompanion() {
 
 function showWishRoot() {
   showChoices("Quel est votre souhait ?", [
-    { label: "Sauvez vos camarades de classe", action: () => confirmWish("Sauver Lin Yuan", true) },
+    { label: "Sauvez vos camarades de classe", action: () => confirmWish("Sauver Léa Martin", true) },
     { label: "Ne pas sauver ses camarades de classe", action: showWishCategories }
   ]);
 }
@@ -127,11 +127,11 @@ function showWishRoot() {
 function showWishCategories() {
   showChoices("Choisissez le type de désir.", [
     { label: "Revenir à l'étape précédente", action: showWishRoot, className: "choice-back" },
-    { label: "gentilles pensées", action: showKindCategories },
-    { label: "brutal", action: () => showWishList("brutal", brutalWishes) },
+    { label: "Bienveillance", action: showKindCategories },
+    { label: "Violence", action: () => showWishList("Violence", brutalWishes) },
     { label: "Avidité", action: () => showWishList("Avidité", greedyWishes) },
     { label: "voyage dans le temps", action: showTravelCategories },
-    { label: "Transformer", action: showTransformationCategories }
+    { label: "Transformation", action: showTransformationCategories }
   ]);
 }
 
@@ -150,7 +150,7 @@ function showTravelCategories() {
     { label: "Revenir à l'étape précédente", action: showWishCategories, className: "choice-back" },
     { label: "remonter le temps", action: showPastDestinations },
     { label: "Voyagez dans un autre monde", action: () => confirmWish("Voyagez dans un autre monde", false, showTravelCategories) },
-    { label: "Voyagez dans la deuxième dimension", action: () => confirmWish("Voyagez dans la deuxième dimension", false, showTravelCategories) }
+    { label: "Entrer dans un univers de fiction", action: () => confirmWish("Entrer dans un univers de fiction", false, showTravelCategories) }
   ]);
 }
 
@@ -179,7 +179,7 @@ function showTransformationCategories() {
     { label: "devenir une plante", action: () => showNamedTransformations("usine", plants) },
     { label: "devenir une créature fantastique", action: () => showNamedTransformations("créatures fantastiques", fantasyCreatures) },
     { label: "devenir un champignon", action: () => confirmWish("devenir un champignon", false, showTransformationCategories) },
-    { label: "devenir des bactéries", action: () => confirmWish("devenir des bactéries", false, showTransformationCategories) },
+    { label: "devenir une bactérie", action: () => confirmWish("devenir une bactérie", false, showTransformationCategories) },
     { label: "devenir un virus", action: () => confirmWish("devenir un virus", false, showTransformationCategories) }
   ]);
 }

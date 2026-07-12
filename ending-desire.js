@@ -9,10 +9,10 @@ const stories = {
   "Invoquer l'Ancien": "Ils sont revenus dans ce monde, et l'effondrement et la reconstruction se sont répétés. Vous vous demandez combien de temps la raison humaine peut tenir devant le Grand Être. Et ce qui se passe ensuite est une autre histoire.",
   "Obtenez l'immortalité": "Le temps contourne votre corps. De vieux amis, des villes et des époques continuent de partir, mais vous resterez toujours cette nuit de cérémonie de lancement.",
   "Avoir d'innombrables richesses": "Vous disposez d’une richesse incalculable et il n’y a rien que vous ne puissiez vous permettre. Mais ensuite, comment allez-vous utiliser cette richesse qui ne pourra jamais être dépensée ?",
-  "Avoir un harem de beautés": "D'innombrables personnes viennent vers vous comme vous le souhaitez. Vous êtes aimé de tous, mais vous ne pouvez plus confirmer si l'un de vos sentiments est sincère.",
+  "Être entouré de personnes séduisantes": "D’innombrables personnes viennent à vous. Tout le monde semble vous aimer, mais vous ne savez plus si un seul de ces sentiments est sincère.",
   "créer un nouveau monde": "Un nouveau monde s'ouvre devant vous. Il n'a pas les péchés et les regrets du passé, mais s'il se transformera en paradis ou en un autre abîme, cela sera écrit de vos propres mains.",
   "Ayez de la nourriture sans fin": "La table est toujours pleine et les assiettes vides sont à nouveau remplies en un clin d'œil. Vous n’aurez plus jamais faim, mais peu à peu vous avez oublié ce que l’on ressent lorsqu’on est rassasié.",
-  "envie d'en avoir plus": "Un souhait s'est transformé en d'innombrables souhaits. Chaque satisfaction entraîne de nouveaux désirs et Omoya attend toujours patiemment que vous payiez le prochain prix.",
+  "Obtenir davantage de vœux": "Un vœu en devient une infinité. Chaque désir assouvi en fait naître un autre, tandis qu’Omoyata attend patiemment que vous en payiez le prix.",
   "acquérir des super pouvoirs": "Une puissance incroyable s’éveille en vous. Le monde ne respecte plus les règles que vous connaissez et vous devez décider qui vous voulez être avec ce pouvoir.",
   "Devenez un être omniscient et omnipotent": "Le passé et le futur, le réel et le possible envahissent votre conscience en même temps. Vous savez enfin tout et pouvez tout faire, et vous perdez enfin vos surprises, vos questions et vos attentes.",
   "Rendre votre corps à nouveau en bonne santé": "La douleur et la faiblesse ont disparu du corps. Vous ressentez la facilité de respirer, de courir et de vous réveiller pour la première fois depuis longtemps. Pour la première fois, une journée ordinaire semble si précieuse.",
@@ -27,10 +27,10 @@ const stories = {
   "Abandonner ses souvenirs et retourner dans l’époque moderne": "On vous a souvent dit qu’autrefois, la vie était meilleure. Vous vous réveillez à l’époque moderne et acceptez cette existence comme la seule que vous ayez jamais connue.",
   "Abandonner ses souvenirs et retourner dans votre enfance": "On vous a souvent dit qu’autrefois, la vie était meilleure. Vous redevenez l’enfant que vous étiez ; les joies et les regrets à venir se produiront comme pour la première fois.",
   "Voyagez dans un autre monde": "Le clair de lune s'est transformé en une porte étrange. Il n’y a pas d’école derrière la porte et il n’y a pas de règles familières ; un tout autre monde vous attend pour choisir une nouvelle identité pour vous-même.",
-  "Voyagez dans la deuxième dimension": "Les frontières de la réalité deviennent papier et lumière. Vous entrez dans le monde bidimensionnel que vous regardiez autrefois à travers l'écran. Cette fois, vous n’êtes plus seulement un public extérieur à l’histoire.",
+  "Entrer dans un univers de fiction": "Les frontières de la réalité se changent en papier et en lumière. Vous pénétrez dans le monde que vous contempliez autrefois à travers un écran ; cette fois, vous faites partie de l’histoire.",
   "devenir un vampire": "Vous entendez le sang couler dans chaque corps vivant. L’histoire des mille prochaines années sera écrite par vous qui ne vieillirez jamais.",
   "devenir un champignon": "Vous vous étendez dans l'ombre et le sol, et le fin mycélium relie un autre monde immense. Les frontières des individus s’estompent et la vie prend une toute nouvelle dimension.",
-  "devenir des bactéries": "Le monde devint soudain extrêmement vaste. Une goutte d’eau est l’océan, un corps est la planète et vous continuerez à exister là où l’œil nu ne peut pas le voir.",
+  "devenir une bactérie": "Le monde devient soudain démesuré. Une goutte d’eau est un océan, un corps une planète, et vous poursuivez votre existence hors de portée du regard humain.",
   "devenir un virus": "Vous perdez votre corps familier et il ne vous reste plus qu'une information en attente de copie. Que vous soyez toujours en vie n’est plus une question facile à répondre."
 };
 
@@ -38,7 +38,7 @@ const animalNames = ["chien", "chat", "bœuf", "mouton", "cochon", "cheval", "po
 const plantNames = ["riz", "blé", "maïs", "Pomme de terre", "tomate", "pommier", "pin", "bambou", "Rose", "tournesol"];
 const fantasyNames = ["dragon", "Phénix", "licorne", "Elfe", "sirène", "Ange", "démon", "Vase", "géant", "démon renard"];
 
-const kindWishRegret = "Même ainsi, ceux qui sont décédés, y compris Lin Yuan, resteront toujours un fardeau dans votre mémoire.";
+const kindWishRegret = "Même ainsi, ceux qui sont décédés, y compris Léa Martin, resteront toujours un fardeau dans votre mémoire.";
 const kindWishNames = [
   "Rendre votre corps à nouveau en bonne santé",
   "Arrêtez toutes les choses qui vous rendent accro",
@@ -68,7 +68,7 @@ const endingDescription = document.createElement("p");
 const resultWish = document.createElement("strong");
 endingDescription.append("tu as réussi");
 resultWish.textContent = wish;
-endingDescription.append(resultWish, "。");
+endingDescription.append(resultWish, ". ");
 
 const burdenText = "fardeau en mémoire";
 const burdenIndex = story.indexOf(burdenText);
