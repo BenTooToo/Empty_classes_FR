@@ -72,12 +72,17 @@ portraits.forEach((portrait) => {
   portrait.asset.src = portrait.image;
 });
 
-/* 五个字从加载开始就是北墙纹理的一部分，画框只负责在其前方遮挡。 */
-['看','看','你','身','后'].forEach((character, index) => {
+/* Le message fait partie du mur nord dès le chargement ; les cadres ne font que le masquer. */
+['RE', 'GAR', 'DE', 'DERRIÈRE', 'TOI'].forEach((character, index) => {
   const mark = document.createElement('canvas');
   mark.width = 256; mark.height = 256;
   const markContext = mark.getContext('2d');
-  markContext.font = '900 202px SimSun, "Microsoft YaHei", serif';
+  let markFontSize = 180;
+  markContext.font = `700 ${markFontSize}px "Pixelify Sans", "Lucida Console", monospace`;
+  while (markContext.measureText(character).width > 218 && markFontSize > 40) {
+    markFontSize -= 4;
+    markContext.font = `700 ${markFontSize}px "Pixelify Sans", "Lucida Console", monospace`;
+  }
   markContext.textAlign = 'center';
   markContext.textBaseline = 'middle';
   markContext.lineWidth = 10;

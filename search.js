@@ -3,7 +3,7 @@ const searchRecords = [
     title: "Forum de la ville boîte noire",
     type: "Encyclopédie de la boîte noire",
     href: "pages/38-heixiang-forum-intro.html",
-    keys: ["boîte noire", "Black Box City", "Forum de la ville boîte noire"],
+    keys: ["boîte noire", "Black Box City", "Forum de la ville boîte noire","boite"],
     text: "Le site de forum le plus célèbre au monde est célèbre pour ses légendes urbaines et ses anecdotes, dont beaucoup sont encore discutées par les internautes aujourd'hui."
   },
   {
@@ -28,7 +28,7 @@ const searchRecords = [
     title: "Services de conseil psychologique recommandés à Fu'anfan",
     type: "annonce",
     href: "pages/26-fuanfan-counseling-notice.html",
-    keys: ["Riz Fu'an", "Restaurant de cuisine maison Fu'an"]
+    keys: ["福安饭","福安家常餐馆"]
   },
   {
     title: "Album photos de classe",
@@ -52,25 +52,21 @@ const searchRecords = [
     title: "Erreur",
     type: "Erreur d’autorisation",
     href: "pages/08-absence-correction.html",
-    keys: ["absent", "liste des absents"]
+    keys: ["absent", "liste des absents","abs"]
   },
   {
     title: "liste des étudiants",
     type: "liste",
     href: "pages/09-student-roster.html",
     keys: [
-      "liste des élèves",
-      "Julien Moreau", "Julien", "Moreau", "délégué de classe",
-      "Camille Laurent", "Camille", "Laurent", "déléguée à l’informatique",
-      "Élise Martin", "Élise", "Elise", "Martin", "déléguée aux arts",
-      "Thomas Dubois", "Thomas", "Dubois", "délégué aux sports"
+      "liste des élèves", "délégué de classe", "déléguée à l’informatique", "déléguée aux arts","déléguée","délégué","élève","élèves"
     ]
   },
   {
     title: "capture d'écran",
     type: "photo",
     href: "pages/28-zhang-yuhang-call-record.html",
-    keys: ["Antoine Lefèvre", "Antoine", "Lefèvre", "Lefevre", "Julien Moreau", "Julien", "Moreau"]
+    keys: ["Antoine Lefèvre", "Antoine", "Lefèvre", "Lefevre"]
   },
   {
     title: "Élise Martin",
@@ -82,7 +78,7 @@ const searchRecords = [
     title: "Bentootoo",
     type: "Encyclopédie de la boîte noire",
     href: "pages/27-ben2tu-profile.html",
-    keys: ["Bentootoo", "ben2tu", "bilibili", "auteur de l'annuaire des anciens du lycée n°6 de Zhetang"]
+    keys: ["Bentootoo", "ben2tu", "bilibili"]
   },
   {
     title: "Fonction de hachage",
@@ -141,20 +137,98 @@ function normalize(value) {
     .replace(/\s+/g, " ");
 }
 
-function matchesQuery(key, query) {
-  const normalizedKey = normalize(key);
+function tokenize(value) {
+  return normalize(value)
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter(Boolean);
+}
 
-  if (normalizedKey === query) {
+function makeAcronym(value) {
+  const ignoredWords = new Set([
+    "a", "au", "aux", "d", "de", "des", "du", "en", "et",
+    "l", "la", "le", "les", "un", "une"
+  ]);
+
+  return tokenize(value)
+    .filter((word) => !ignoredWords.has(word))
+    .map((word) => word[0])
+    .join("");
+}
+
+function editDistance(left, right) {
+  const distances = Array.from(
+    { length: left.length + 1 },
+    () => Array(right.length + 1).fill(0)
+  );
+
+  for (let leftIndex = 0; leftIndex <= left.length; leftIndex += 1) {
+    distances[leftIndex][0] = leftIndex;
+  }
+
+  for (let rightIndex = 0; rightIndex <= right.length; rightIndex += 1) {
+    distances[0][rightIndex] = rightIndex;
+  }
+
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      const substitutionCost = left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1;
+      distances[leftIndex][rightIndex] = Math.min(
+        distances[leftIndex][rightIndex - 1] + 1,
+        distances[leftIndex - 1][rightIndex] + 1,
+        distances[leftIndex - 1][rightIndex - 1] + substitutionCost
+      );
+
+      const isTransposition = leftIndex > 1
+        && rightIndex > 1
+        && left[leftIndex - 1] === right[rightIndex - 2]
+        && left[leftIndex - 2] === right[rightIndex - 1];
+
+      if (isTransposition) {
+        distances[leftIndex][rightIndex] = Math.min(
+          distances[leftIndex][rightIndex],
+          distances[leftIndex - 2][rightIndex - 2] + 1
+        );
+      }
+    }
+  }
+
+  return distances[left.length][right.length];
+}
+
+function matchesWord(word, queryWord) {
+  if (word.includes(queryWord)) {
     return true;
   }
 
-  if (query.length < 3) {
+  if (queryWord.length < 4) {
     return false;
   }
 
-  return normalizedKey.startsWith(query) || normalizedKey
-    .split(/[\s'’_-]+/)
-    .some((part) => part.startsWith(query));
+  const allowedDistance = queryWord.length >= 8 ? 2 : 1;
+  return editDistance(word, queryWord) <= allowedDistance;
+}
+
+function matchesQuery(key, query) {
+  const normalizedKey = normalize(key);
+
+  if (normalizedKey === query || normalizedKey.includes(query)) {
+    return true;
+  }
+
+  const keyWords = tokenize(normalizedKey);
+  const queryWords = tokenize(query);
+
+  if (!queryWords.length) {
+    return false;
+  }
+
+  if (queryWords.length === 1 && makeAcronym(normalizedKey).startsWith(queryWords[0])) {
+    return true;
+  }
+
+  return queryWords.every((queryWord) => {
+    return keyWords.some((word) => matchesWord(word, queryWord));
+  });
 }
 
 function renderEmpty(message) {
