@@ -21,7 +21,7 @@ const dashboardRoles = {
     title: "Espace de la déléguée à l’informatique",
     theme: "dark",
     dashboard: "admin-info-dashboard.html",
-    files: ["info-diary-01", "info-diary-02", "info-diary-03"]
+    files: ["info-diary-02"]
   }
 };
 
@@ -302,35 +302,18 @@ const fileRecords = {
       <p>Ceci n'est pas une connexion normale. Il s'agissait de demander à Hugo Dubois s'il était prêt à admettre qu'il était Thomas Dubois et s'il était prêt à abandonner son dernier souhait inutilisé. </p>
     `
   },
-  "info-diary-01": {
-    title: "Journal de la déléguée à l’informatique 1",
+   "info-diary-02": {
+    title: "Texte déformé",
     html: `
       <article class="role-diary-paper">
-        <p>Le compte <strong>Administrateur</strong> du délégué était si facile à deviner qu’il avait même choisi le nom de son chien comme mot de passe. J’ai ainsi obtenu toutes les informations sur la cérémonie. Tout est presque terminé. Je dois offrir un bon foyer à Léa.</p>
-        <p class="role-file-signature">18 juin 2020 Camille Laurent</p>
+        <p>Léa est venue me voir la veille de sa disparition. Elle m’a dit que le délégué avait invité plusieurs personnes au lycée pour organiser, avant la remise des diplômes, une dernière activité « réservée aux leurs ».</p>
+        <p>Elle ne voulait pas vraiment y aller, mais elle avait peur de décevoir les autres. Elle m’a également dit que le délégué aux sports serait présent, que la déléguée aux arts avait préparé du papier et des motifs, et que deux amis du délégué surveilleraient les portes.</p>
+        <p>Je lui ai demandé s’il s’agissait d’une plaisanterie. Elle m’a répondu qu’elle n’en savait rien et qu’elle les avait seulement entendus parler d’une légende urbaine découverte sur un forum. <strong>Après ce jour-là, elle a disparu.</strong></p>
+        <p>Mais le plus effrayant, c’est que plus personne ne se souvenait de Léa. Tout le monde affirmait qu’il n’y avait jamais eu une telle élève dans notre classe. Même les parents de Léa disaient que ma plaisanterie allait trop loin…</p>
+        <p>Je refuse de le croire. Je ramènerai Léa, quoi qu’il arrive. Je commencerai par faire parler le délégué.</p>
       </article>
     `
   },
-  "info-diary-02": {
-    title: "Journal de la déléguée à l’informatique 2",
-    html: `
-      <article class="role-diary-paper">
-        <p>Léa est venue me voir la veille de sa disparition. Elle m’a expliqué que le délégué de classe avait invité quelques personnes au lycée pour une dernière activité avant la remise des diplômes, une activité « que seuls les élèves de notre classe connaîtraient ».</p>
-        <p>Elle ne voulait pas y aller, mais elle avait peur de décevoir tout le monde. Elle a aussi dit que le délégué aux sports serait présent, que la déléguée aux arts avait préparé le papier et les motifs, et que les trois amis du délégué de classe monteraient la garde.</p>
-        <p>Je lui ai demandé si c’était une plaisanterie. Elle m’a répondu qu’elle n’en savait rien et qu’elle les avait seulement entendus parler d’une méthode trouvée sur le forum. <strong>Ce jour-là, elle m’a dit qu’elle sortait avec le délégué et d’autres camarades de classe, puis elle a disparu.</strong></p>
-        <p>Tout le monde a dit qu'elle s'était peut-être enfuie de chez elle, et a ensuite déclaré qu'il n'y avait personne de ce type dans notre classe. Seul le site Web a refusé de l'admettre et a toujours exclu son nom des commentaires des autres. </p>
-        <p>Utilisez le chiffrement par hachage pour chiffrer la valeur de hachage. Je suis peut-être un génie. Même si quelqu'un peut le déchiffrer une fois, il ne pensera jamais à le déchiffrer deux fois de suite, haha... Pour le mot de passe d'origine, définissez-le simplement sur la date d'aujourd'hui. </p>
-      </article>
-    `
-  },
-  "info-diary-03": {
-    title: "Journal de la déléguée à l’informatique 3",
-    html: `
-      <article class="role-diary-paper">
-        <p>Je sais enfin qui il reste. Ce n’est ni Julien Moreau, ni Élise Martin, ni les trois personnes qui suivaient le délégué. Le Registre du retour des âmes les a tous retrouvés.</p>
-        <p>Il ne reste plus qu’une personne. Elle était présente elle aussi, mais son nom a été rayé de la liste des élèves. Aujourd’hui, il s’appelle Hugo Dubois, mais je me souviens que Léa l’appelait <strong>Thomas Dubois</strong>.</p>
-        <p>Le nom dans l'ancienne liste était <strong>Thomas Dubois</strong>. S'il ne se souvenait vraiment de rien, pourquoi avait-il changé de nom ? Pourquoi n'osez-vous pas cliquer sur « Événements majeurs de juillet » lorsque vous le voyez ? </p>
-        <p><strong>L’un des derniers témoins a réellement perdu la mémoire et a même changé de prénom. À quoi bon ?</strong> Le site le retrouvera. Léa aussi.</p>
       </article>
     `
   },

@@ -49,8 +49,9 @@ const searchRecords = [
     keys: ["administrateur", "admin", "admistrateur"]
   },
   {
-    title: "erreur",
-    href: "pages/admin-file-view.html?role=monitor&file=absence-correction",
+    title: "Erreur",
+    type: "Erreur d’autorisation",
+    href: "pages/08-absence-correction.html",
     keys: ["absent", "liste des absents"]
   },
   {
@@ -104,27 +105,14 @@ const searchRecords = [
   {
     title: "Le délégué et mon mot de passe",
     type: "journal",
-    href: "pages/admin-file-view.html?role=info&file=info-diary-01",
+    href: "pages/10-info-diary-01.html",
     keys: ["Camille Laurent", "Camille", "Laurent"]
   },
   {
-    title: "Journal 2",
-    type: "journal",
-    href: "pages/admin-file-view.html?role=info&file=info-diary-02",
-    keys: []
-  },
-  {
-    title: "Mon journal 3 : déléguée à l’informatique",
-    type: "journal",
-    href: "pages/admin-file-view.html?role=info&file=info-diary-03",
-    keys: ["Mon journal 3", "Camille Laurent", "Camille", "Laurent", "Thomas Dubois", "Thomas", "Hugo Dubois", "Hugo", "Dubois", "témoin", "nom changé"]
-  },
-
-  {
-    title: "Affaire non résolue : une fille fantôme apparaît sur le site Web de l'école",
+    title: "Affaire non résolue : une fille fantôme apparaît sur le site Web de l’école",
     type: "actualités du divertissement",
     href: "pages/29-ghost-girl-news.html",
-    keys: ["fille fantôme", "cas non résolu"]
+    keys: ["fantôme", "fille fantôme", "cas non résolu"]
   },
  
   {
