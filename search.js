@@ -115,7 +115,7 @@ const searchRecords = [
     title: "La rituel d’invocation des âmes d'Omoyata peut vraiment réaliser votre souhait",
     type: "Forum boîte noire",
     href: "pages/31-omoyeta-ritual-thread.html",
-    keys: ["Rituel d’invocation des âmes d’Omoyata", "Omoyata", "rituel d’invocation", "invocation des âmes"]
+    keys: ["Rituel d’invocation des âmes d’Omoyata", "Omoyata", "rituel d’invocation", "invocation des âmes","souhait"]
   },
   
 ];
