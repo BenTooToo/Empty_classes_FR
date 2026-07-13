@@ -14,12 +14,12 @@
     <section class="camera-list-panel" aria-labelledby="cameraListTitle">
       <div class="old-window-title"><h2 id="cameraListTitle">Liste des points de surveillance</h2><span>Heure locale :<b id="surveillanceClock">--:--:--</b></span></div>
       <div class="camera-table" role="table" aria-label="Statut du point de surveillance">
-        <div class="camera-row camera-table-head" role="row"><span>Objet d'observation</span><span>Localisation de surveillance</span><span>État</span><span>Vidéo</span></div>
-        <div class="camera-row" role="row"><b>01</b><span>chambre à coucher</span><em class="weak">découvert</em><small>Archivé</small></div>
-        <div class="camera-row" role="row"><b>02</b><span>Porte de bureau</span><em class="weak">découvert</em><small>Archivé</small></div>
-        <div class="camera-row" role="row"><b>03</b><span>chambre à coucher</span><em>La connexion est normale</em><small>Enregistrement</small></div>
-        <div class="camera-row" role="row"><b>04</b><span>Entrée de la villa</span><em class="weak">découvert</em><small>Supprimé</small></div>
-        <div class="camera-row" role="row"><b>05</b><span>Entrée de la villa</span><em class="weak">Panne d'équipement</em><small>Supprimé</small></div>
+        <div class="camera-row camera-table-head" role="row"><span>Objet surveillé</span><span>Emplacement</span><span>Statut</span><span>Vidéo</span></div>
+        <div class="camera-row" role="row"><b>01</b><span>Chambre</span><em class="weak">Caméra repérée</em><small>Archivée</small></div>
+        <div class="camera-row" role="row"><b>02</b><span>Entrée du bureau</span><em class="weak">Caméra repérée</em><small>Archivée</small></div>
+        <div class="camera-row" role="row"><b>03</b><span>Chambre</span><em>Connexion active</em><small>En cours</small></div>
+        <div class="camera-row" role="row"><b>04</b><span>Entrée de la villa</span><em class="weak">Caméra repérée</em><small>Supprimée</small></div>
+        <div class="camera-row" role="row"><b>05</b><span>Entrée de la villa</span><em class="weak">Équipement défaillant</em><small>Supprimée</small></div>
       </div>
       <p class="camera-list-note">Veuillez télécharger les vidéos enregistrées à partir de la liste de fichiers sur la droite et utiliser le lecteur local pour les visualiser.</p>
     </section>
@@ -39,32 +39,32 @@
         <p class="recording-archive-help">Cliquez sur le fichier pour lancer le téléchargement. Une fois le téléchargement terminé, veuillez l'ouvrir avec un lecteur local dans le dossier de téléchargement.</p>
       </div>
       <section class="relationship-log" aria-labelledby="relationshipLogTitle">
-        <div class="old-window-title"><h2 id="relationshipLogTitle">enregistrer</h2></div>
-        <ol class="relationship-log-list" aria-label="Observer le journal des relations d'objet">
-          <li><time>2016-07-09 22:41</time><span><b>02</b> La cérémonie a été célébrée.</span></li>
-          <li><time>2020-10-26 20:17</time><span><b>01</b> Allongé sur le lit, j'ai commencé à regarder mon téléphone.</span></li>
+        <div class="old-window-title"><h2 id="relationshipLogTitle">Journal d’activité</h2></div>
+        <ol class="relationship-log-list" aria-label="Journal des interactions entre les objets surveillés">
+          <li><time>2016-07-09 22:41</time><span><b>02</b> a effectué le rituel.</span></li>
+          <li><time>2020-10-26 20:17</time><span><b>01</b> s’est allongé sur le lit et a commencé à consulter son téléphone.</span></li>
           <li><time>2020-10-26 20:26</time><span><b>06</b> a observé <b>01</b>.</span></li>
-          <li><time>2020-10-26 20:39</time><span><b>01</b> Buvez une canette de soda.</span></li>
-          <li><time>2020-10-26 21:08</time><span><b>04</b> J'ai fait un long voyage.</span></li>
-          <li><time>2020-10-26 22:32</time><span><b>04</b> Dos.</span></li>
-          <li><time>2020-10-26 23:48</time><span><b>01</b> Je veux expier.</span></li>
-          <li><time>2020-10-27 00:16</time><span><b>04</b> J'ai fait un long voyage.</span></li>
-          <li><time>2020-10-27 00:43</time><span><b>01</b> Manquant.</span></li>
-          <li><time>2020-10-27 02:11</time><span><b>04</b> Dos.</span></li>
-          <li><time>2020-10-27 02:19</time><span><b>04</b> Je veux expier.</span></li>
+          <li><time>2020-10-26 20:39</time><span><b>01</b> a bu une canette de soda.</span></li>
+          <li><time>2020-10-26 21:08</time><span><b>04</b> est parti pour un long déplacement.</span></li>
+          <li><time>2020-10-26 22:32</time><span><b>04</b> est de retour.</span></li>
+          <li><time>2020-10-26 23:48</time><span><b>01</b> souhaite expier ses fautes.</span></li>
+          <li><time>2020-10-27 00:16</time><span><b>04</b> est parti pour un long déplacement.</span></li>
+          <li><time>2020-10-27 00:43</time><span><b>01</b> a disparu.</span></li>
+          <li><time>2020-10-27 02:11</time><span><b>04</b> est de retour.</span></li>
+          <li><time>2020-10-27 02:19</time><span><b>04</b> souhaite expier ses fautes.</span></li>
           <li><time>2020-10-27 02:37</time><span><b>06</b> a observé <b>03</b>.</span></li>
-          <li><time>2020-11-03 07:20</time><span><b>04</b> J'ai fait un long voyage.</span></li>
-          <li><time>2020-11-03 19:06</time><span><b>04</b> Dos.</span></li>
-          <li><time>2020-11-12 06:45</time><span><b>04</b> et <b>05</b> En même temps, j'ai fait un long voyage.</span></li>
-          <li><time>2020-11-15 14:10</time><span><b>06</b> Venez signaler <b>04</b> de la mort.</span></li>
-          <li><time>2020-11-15 14:18</time><span><b>07</b> et <b>08</b> Très triste.</span></li>
-          <li><time>2020-11-22 09:30</time><span><b>07</b> et <b>08</b> J'ai quitté la villa.</span></li>
-          <li><time>2020-11-23 10:05</time><span><b>06</b> Devenu propriétaire de la première villa.</span></li>
-          <li><time>2020-11-23 22:16</time><span><b>06</b> Allongé sur le lit.</span></li>
-          <li><time>2020-12-01 11:40</time><span><b>06</b> Devenu propriétaire de la deuxième villa.</span></li>
+          <li><time>2020-11-03 07:20</time><span><b>04</b> est parti pour un long déplacement.</span></li>
+          <li><time>2020-11-03 19:06</time><span><b>04</b> est de retour.</span></li>
+          <li><time>2020-11-12 06:45</time><span><b>04</b> et <b>05</b> sont partis en même temps pour un long déplacement.</span></li>
+          <li><time>2020-11-15 14:10</time><span><b>06</b> a annoncé le décès de <b>04</b>.</span></li>
+          <li><time>2020-11-15 14:18</time><span><b>07</b> et <b>08</b> sont en deuil.</span></li>
+          <li><time>2020-11-22 09:30</time><span><b>07</b> et <b>08</b> ont déménagé et quitté la villa.</span></li>
+          <li><time>2020-11-23 10:05</time><span><b>06</b> est devenu propriétaire de la première villa.</span></li>
+          <li><time>2020-11-23 22:16</time><span><b>06</b> s’est allongé sur le lit.</span></li>
+          <li><time>2020-12-01 11:40</time><span><b>06</b> est devenu propriétaire de la deuxième villa.</span></li>
           <li><time>2020-12-01 20:12</time><span><b>06</b> a observé <b>03</b>.</span></li>
-          <li><time>2020-12-18 16:27</time><span><b>02</b> Empoisonné.</span></li>
-          <li><time>2020-12-19 09:52</time><span><b>06</b> Devenu le maître du bureau.</span></li>
+          <li><time>2020-12-18 16:27</time><span>Empoisonnement de <b>02</b> détecté.</span></li>
+          <li><time>2020-12-19 09:52</time><span><b>06</b> est devenu propriétaire du bureau.</span></li>
           <li><time>2020-12-19 21:03</time><span><b>06</b> a observé <b>03</b>.</span></li>
         </ol>
       </section>

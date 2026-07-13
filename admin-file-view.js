@@ -302,7 +302,7 @@ const fileRecords = {
       <p>Ceci n'est pas une connexion normale. Il s'agissait de demander à Hugo Dubois s'il était prêt à admettre qu'il était Thomas Dubois et s'il était prêt à abandonner son dernier souhait inutilisé. </p>
     `
   },
-   "info-diary-02": {
+  "info-diary-02": {
     title: "Texte déformé",
     html: `
       <article class="role-diary-paper">
@@ -311,9 +311,6 @@ const fileRecords = {
         <p>Je lui ai demandé s’il s’agissait d’une plaisanterie. Elle m’a répondu qu’elle n’en savait rien et qu’elle les avait seulement entendus parler d’une légende urbaine découverte sur un forum. <strong>Après ce jour-là, elle a disparu.</strong></p>
         <p>Mais le plus effrayant, c’est que plus personne ne se souvenait de Léa. Tout le monde affirmait qu’il n’y avait jamais eu une telle élève dans notre classe. Même les parents de Léa disaient que ma plaisanterie allait trop loin…</p>
         <p>Je refuse de le croire. Je ramènerai Léa, quoi qu’il arrive. Je commencerai par faire parler le délégué.</p>
-      </article>
-    `
-  },
       </article>
     `
   },

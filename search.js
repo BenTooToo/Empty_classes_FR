@@ -79,10 +79,10 @@ const searchRecords = [
     keys: ["Élise Martin", "Élise", "Elise", "Martin"]
   },
   {
-    title: "ben2lapin",
+    title: "Bentootoo",
     type: "Encyclopédie de la boîte noire",
     href: "pages/27-ben2tu-profile.html",
-    keys: ["ben2tu", "bilibili", "auteur de l'annuaire des anciens du lycée n°6 de Zhetang"]
+    keys: ["Bentootoo", "ben2tu", "bilibili", "auteur de l'annuaire des anciens du lycée n°6 de Zhetang"]
   },
   {
     title: "Fonction de hachage",
